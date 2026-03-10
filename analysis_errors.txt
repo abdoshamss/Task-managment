@@ -1,0 +1,282 @@
+Waiting for another flutter command to release the startup lock...
+Analyzing task_mangment...                                      
+
+   info • The file name 'Router.dart' isn't a lower_case_with_underscores identifier • lib/core/Router/Router.dart:1:1 • file_names
+   info • The variable name 'OTP' isn't a lowerCamelCase identifier • lib/core/app_strings/app_strings.dart:21:21 • non_constant_identifier_names
+   info • The constant name 'onboarding_title1' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:4:16 • constant_identifier_names
+   info • The constant name 'onboarding_subTittle1' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:5:16 • constant_identifier_names
+   info • The constant name 'onboarding_title2' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:6:16 • constant_identifier_names
+   info • The constant name 'onboarding_subTittle2' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:7:16 • constant_identifier_names
+   info • The constant name 'onboarding_title3' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:8:16 • constant_identifier_names
+   info • The constant name 'onboarding_subTittle3' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:9:16 • constant_identifier_names
+   info • The constant name 'auth_login' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:11:16 • constant_identifier_names
+   info • The constant name 'auth_description_login' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:12:16 • constant_identifier_names
+   info • The constant name 'auth_hint_phone' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:13:16 • constant_identifier_names
+   info • The constant name 'auth_hint_password' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:14:16 • constant_identifier_names
+   info • The constant name 'auth_do_you_forget_your_password' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:15:16 • constant_identifier_names
+   info • The constant name 'auth_enter' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:17:16 • constant_identifier_names
+   info • The constant name 'auth_havnot_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:18:16 • constant_identifier_names
+   info • The constant name 'auth_register_new_acc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:19:16 • constant_identifier_names
+   info • The constant name 'auth_description_register' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:20:16 • constant_identifier_names
+   info • The constant name 'auth_hint_name' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:21:16 • constant_identifier_names
+   info • The constant name 'auth_hint_email' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:22:16 • constant_identifier_names
+   info • The constant name 'auth_hint_password_confirm' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:23:16 • constant_identifier_names
+   info • The constant name 'auth_create' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:24:16 • constant_identifier_names
+   info • The constant name 'auth_have_an_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:25:16 • constant_identifier_names
+   info • The constant name 'auth_description_forget' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:26:16 • constant_identifier_names
+   info • The constant name 'auth_send_otp' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:27:16 • constant_identifier_names
+   info • The constant name 'auth_otp' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:28:16 • constant_identifier_names
+   info • The constant name 'auth_description_otp' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:29:16 • constant_identifier_names
+   info • The constant name 'auth_check' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:30:16 • constant_identifier_names
+   info • The constant name 'auth_new_password' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:31:16 • constant_identifier_names
+   info • The constant name 'auth_new_password_description' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:32:16 • constant_identifier_names
+   info • The constant name 'auth_hint_new_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:33:16 • constant_identifier_names
+   info • The constant name 'auth_hint_confirm_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:34:16 • constant_identifier_names
+   info • The constant name 'auth_save_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:35:16 • constant_identifier_names
+   info • The constant name 'auth_welcome_back' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:36:16 • constant_identifier_names
+   info • The constant name 'auth_login_to_access' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:37:16 • constant_identifier_names
+   info • The constant name 'auth_email' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:38:16 • constant_identifier_names
+   info • The constant name 'auth_password' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:39:16 • constant_identifier_names
+   info • The constant name 'auth_forgot_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:40:16 • constant_identifier_names
+   info • The constant name 'auth_using_retm' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:41:16 • constant_identifier_names
+   info • The constant name 'auth_our_terms' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:42:16 • constant_identifier_names
+   info • The constant name 'auth_pass_restore' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:43:16 • constant_identifier_names
+   info • The constant name 'auth_pass_restore_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:44:16 • constant_identifier_names
+   info • The constant name 'auth_next' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:45:16 • constant_identifier_names
+   info • The constant name 'auth_code_confirmation' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:46:16 • constant_identifier_names
+   info • The constant name 'auth_code_confirmation_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:47:16 • constant_identifier_names
+   info • The constant name 'auth_resend' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:48:16 • constant_identifier_names
+   info • The constant name 'auth_new_pass_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:49:16 • constant_identifier_names
+   info • The constant name 'auth_enter_new_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:50:16 • constant_identifier_names
+   info • The constant name 'auth_confirm_new_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:51:16 • constant_identifier_names
+   info • The constant name 'valid_requiredField' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:53:16 • constant_identifier_names
+   info • The constant name 'valid_requiredPhone' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:54:16 • constant_identifier_names
+   info • The constant name 'valid_phoneDoseNotMatch' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:55:16 • constant_identifier_names
+   info • The constant name 'valid_requiredEmail' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:56:16 • constant_identifier_names
+   info • The constant name 'valid_wrongEmailValidation' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:57:16 • constant_identifier_names
+   info • The constant name 'valid_requiredPassword' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:58:16 • constant_identifier_names
+   info • The constant name 'valid_smallPassword' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:59:16 • constant_identifier_names
+   info • The constant name 'valid_confirmPassword' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:60:16 • constant_identifier_names
+   info • The constant name 'valid_passwordNotMatch' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:61:16 • constant_identifier_names
+   info • The constant name 'Most_requested_products' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:70:16 • constant_identifier_names
+   info • The constant name 'pay_now' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:72:16 • constant_identifier_names
+   info • The constant name 'add_to_cart' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:73:16 • constant_identifier_names
+   info • The constant name 'product_details' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:75:16 • constant_identifier_names
+   info • The constant name 'my_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:77:16 • constant_identifier_names
+   info • The constant name 'enter_your_name' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:78:16 • constant_identifier_names
+   info • The constant name 'personal_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:80:16 • constant_identifier_names
+   info • The constant name 'personal_profile' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:81:16 • constant_identifier_names
+   info • The constant name 'payment_method' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:84:16 • constant_identifier_names
+   info • The constant name 'common_questions' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:85:16 • constant_identifier_names
+   info • The constant name 'delete_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:86:16 • constant_identifier_names
+   info • The constant name 'add_new_address' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:88:16 • constant_identifier_names
+   info • The constant name 'show_details' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:89:16 • constant_identifier_names
+   info • The constant name 'do_you_want_to_delete_your_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:90:16 • constant_identifier_names
+   info • The constant name 'change_language' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:95:16 • constant_identifier_names
+   info • The constant name 'enter_your_password' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:96:16 • constant_identifier_names
+   info • The constant name 'enter_your_email' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:97:16 • constant_identifier_names
+   info • The constant name 'have_an_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:102:16 • constant_identifier_names
+   info • The constant name 'confirm_password' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:103:16 • constant_identifier_names
+   info • The constant name 'change_password' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:104:16 • constant_identifier_names
+   info • The constant name 'settings_settings' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:105:16 • constant_identifier_names
+   info • The constant name 'settings_edit_profile' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:106:16 • constant_identifier_names
+   info • The constant name 'settings_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:107:16 • constant_identifier_names
+   info • The constant name 'settings_language' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:108:16 • constant_identifier_names
+   info • The constant name 'settings_support' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:109:16 • constant_identifier_names
+   info • The constant name 'settings_delete_account' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:110:16 • constant_identifier_names
+   info • The constant name 'settings_delete_account_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:111:16 • constant_identifier_names
+   info • The constant name 'settings_logout' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:112:16 • constant_identifier_names
+   info • The constant name 'settings_logout_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:113:16 • constant_identifier_names
+   info • The constant name 'settings_cancel' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:114:16 • constant_identifier_names
+   info • The constant name 'settings_yes' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:115:16 • constant_identifier_names
+   info • The constant name 'settings_edit' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:116:16 • constant_identifier_names
+   info • The constant name 'settings_name' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:117:16 • constant_identifier_names
+   info • The constant name 'settings_username' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:118:16 • constant_identifier_names
+   info • The constant name 'settings_your_email' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:119:16 • constant_identifier_names
+   info • The constant name 'settings_change_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:120:16 • constant_identifier_names
+   info • The constant name 'settings_change_pass_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:121:16 • constant_identifier_names
+   info • The constant name 'settings_current_pass' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:122:16 • constant_identifier_names
+   info • The constant name 'settings_pick_image_from_gallery' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:123:16 • constant_identifier_names
+   info • The constant name 'settings_remove_current_image' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:125:16 • constant_identifier_names
+   info • The constant name 'settings_ignore_edit' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:126:16 • constant_identifier_names
+   info • The constant name 'settings_ignore_edit_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:127:16 • constant_identifier_names
+   info • The constant name 'settings_ignore' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:128:16 • constant_identifier_names
+   info • The constant name 'settings_support_ticket' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:129:16 • constant_identifier_names
+   info • The constant name 'settings_support_ticket_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:130:16 • constant_identifier_names
+   info • The constant name 'settings_ticket_address' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:131:16 • constant_identifier_names
+   info • The constant name 'settings_ticket_address_hint' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:132:16 • constant_identifier_names
+   info • The constant name 'settings_attachments' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:133:16 • constant_identifier_names
+   info • The constant name 'settings_complain' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:134:16 • constant_identifier_names
+   info • The constant name 'settings_complain_desc' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:135:16 • constant_identifier_names
+   info • The constant name 'settings_submit' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:136:16 • constant_identifier_names
+   info • The constant name 'navBar_workSpace' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:138:16 • constant_identifier_names
+   info • The constant name 'navBar_approval' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:139:16 • constant_identifier_names
+   info • The constant name 'navBar_notifications' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:140:16 • constant_identifier_names
+   info • The constant name 'navBar_settings' isn't a lowerCamelCase identifier • lib/core/app_strings/locale_keys.dart:141:16 • constant_identifier_names
+   info • The constant name 'USER' isn't a lowerCamelCase identifier • lib/core/data_source/hive_helper.dart:12:16 • constant_identifier_names
+  error • Future isn't a type • lib/core/data_source/hive_helper.dart:14:3 • not_a_type
+  error • Future isn't a type • lib/core/data_source/hive_helper.dart:27:3 • not_a_type
+  error • Future isn't a type • lib/core/data_source/hive_helper.dart:33:3 • not_a_type
+  error • Future isn't a type • lib/core/data_source/hive_helper.dart:40:3 • not_a_type
+  error • Future isn't a type • lib/core/data_source/hive_helper.dart:47:3 • not_a_type
+  error • Future isn't a type • lib/core/data_source/hive_helper.dart:65:3 • not_a_type
+  error • The name 'Future' isn't a type, so it can't be used as a type argument • lib/core/data_source/hive_helper.dart:65:10 • non_type_as_type_argument
+   info • Missing type annotation • lib/core/data_source/hive_helper.dart:71:3 • strict_top_level_inference
+   info • The variable name 'Future' isn't a lowerCamelCase identifier • lib/core/data_source/hive_helper.dart:71:3 • non_constant_identifier_names
+  error • Methods must have an explicit list of parameters • lib/core/data_source/hive_helper.dart:71:3 • missing_method_parameters
+   info • The type parameter name 'Future' matches a visible type name • lib/core/data_source/hive_helper.dart:71:10 • avoid_types_as_parameter_names
+  error • Expected to find '>' • lib/core/data_source/hive_helper.dart:71:10 • expected_token
+   info • Missing type annotation • lib/core/data_source/hive_helper.dart:71:27 • strict_top_level_inference
+  error • A function body must be provided • lib/core/data_source/hive_helper.dart:71:27 • missing_function_body
+warning • The value of the field '_keyHiveAesCipher' isn't used • lib/core/data_source/hive_service.dart:9:29 • unused_field
+warning • The value of the field '_keyName' isn't used • lib/core/data_source/hive_service.dart:10:23 • unused_field
+warning • The value of the local variable 'cipherKey' isn't used • lib/core/data_source/hive_service.dart:17:20 • unused_local_variable
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:92:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:96:50 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:331:32 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:332:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:342:32 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:343:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:350:30 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:351:40 • deprecated_member_use
+   info • Missing type annotation • lib/core/extensions/widget_extensions.dart:522:18 • strict_top_level_inference
+   info • Missing type annotation • lib/core/extensions/widget_extensions.dart:525:20 • strict_top_level_inference
+   info • The imported package 'meta' isn't a dependency of the importing package • lib/core/general/general_cubit.dart:3:8 • depend_on_referenced_packages
+   info • Missing type annotation • lib/core/general/general_cubit.dart:11:27 • strict_top_level_inference
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/services/media/item_of_contact.dart:31:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/services/media/item_of_contact.dart:58:35 • deprecated_member_use
+   info • Don't invoke 'print' in production code • lib/core/services/media/media_service.dart:49:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/core/services/media/media_service.dart:68:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/core/services/media/media_service.dart:88:7 • avoid_print
+   info • The variable name 'AppColors' isn't a lowerCamelCase identifier • lib/core/style/app_theme.dart:9:15 • non_constant_identifier_names
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/app_theme.dart:45:29 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/app_theme.dart:47:34 • deprecated_member_use
+   info • 'red' is deprecated and shouldn't be used. Use (*.r * 255.0).round().clamp(0, 255) • lib/core/style/app_theme.dart:54:25 • deprecated_member_use
+   info • 'green' is deprecated and shouldn't be used. Use (*.g * 255.0).round().clamp(0, 255) • lib/core/style/app_theme.dart:54:40 • deprecated_member_use
+   info • 'blue' is deprecated and shouldn't be used. Use (*.b * 255.0).round().clamp(0, 255) • lib/core/style/app_theme.dart:54:57 • deprecated_member_use
+   info • 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion • lib/core/style/app_theme.dart:68:32 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/dark_mode/dark_theme.dart:19:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/dark_mode/dark_theme.dart:20:39 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/dark_mode/dark_theme.dart:159:29 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/light_mode/light_theme.dart:18:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/light_mode/light_theme.dart:19:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/light_mode/light_theme.dart:171:33 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:26:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:30:59 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:31:57 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:32:53 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:64:18 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:31:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:36:59 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:37:57 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:38:54 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:49:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:50:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:51:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:52:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:53:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:54:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:55:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:56:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:57:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:88:49 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:94:18 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:98:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:99:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:100:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:101:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:102:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:103:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:104:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:105:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:106:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/theme_manager.dart:49:65 • deprecated_member_use
+   info • The file name 'Locator.dart' isn't a lower_case_with_underscores identifier • lib/core/utils/Locator.dart:1:1 • file_names
+   info • The variable name 'SliverBox' isn't a lowerCamelCase identifier • lib/core/utils/extentions.dart:49:26 • non_constant_identifier_names
+   info • The variable name 'SliverPadding' isn't a lowerCamelCase identifier • lib/core/utils/extentions.dart:50:26 • non_constant_identifier_names
+warning • Dead code • lib/core/utils/extentions.dart:103:45 • dead_code
+warning • The left operand can't be null, so the right operand is never executed • lib/core/utils/extentions.dart:103:48 • dead_null_aware_expression
+  error • The body might complete normally, causing 'null' to be returned, but the return type, 'Color', is a potentially non-nullable type • lib/core/utils/extentions.dart:105:9 • body_might_complete_normally
+   info • The extension name 'formatData' isn't an UpperCamelCase identifier • lib/core/utils/extentions.dart:134:11 • camel_case_extensions
+  error • The returned type 'Widget' isn't returnable from a 'FutureOr<Future<Widget>>' function, as required by the closure's context • lib/core/utils/navigate.dart:12:12 • return_of_invalid_type_from_closure
+   info • Unnecessary use of multiple underscores • lib/core/utils/navigate.dart:38:24 • unnecessary_underscores
+   info • Unnecessary use of multiple underscores • lib/core/utils/navigate.dart:38:28 • unnecessary_underscores
+   info • The variable name 'FCMToken' isn't a lowerCamelCase identifier • lib/core/utils/utils.dart:17:17 • non_constant_identifier_names
+   info • Don't invoke 'print' in production code • lib/core/utils/utils.dart:63:5 • avoid_print
+   info • Missing type annotation • lib/core/utils/validations.dart:57:37 • strict_top_level_inference
+   info • Statements in an if should be enclosed in a block • lib/core/utils/validators.dart:10:7 • curly_braces_in_flow_control_structures
+   info • Missing type annotation • lib/features/auth/cubit/auth_cubit.dart:11:24 • strict_top_level_inference
+   info • Missing type annotation • lib/features/auth/cubit/firebase_auth_cubit.dart:14:32 • strict_top_level_inference
+   info • The variable name 'fcm_token' isn't a lowerCamelCase identifier • lib/features/auth/domain/model/auth_model.dart:9:11 • non_constant_identifier_names
+   info • The variable name 'fcm_token' isn't a lowerCamelCase identifier • lib/features/auth/domain/model/auth_model.dart:18:10 • non_constant_identifier_names
+   info • The variable name 'fcm_token' isn't a lowerCamelCase identifier • lib/features/auth/domain/request/auth_request.dart:11:11 • non_constant_identifier_names
+   info • The variable name 'password_confirmation' isn't a lowerCamelCase identifier • lib/features/auth/domain/request/auth_request.dart:12:11 • non_constant_identifier_names
+   info • The variable name 'fcm_token' isn't a lowerCamelCase identifier • lib/features/auth/domain/request/auth_request.dart:19:10 • non_constant_identifier_names
+   info • The variable name 'password_confirmation' isn't a lowerCamelCase identifier • lib/features/auth/domain/request/auth_request.dart:23:10 • non_constant_identifier_names
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/forget_password/forget_password_screen.dart:78:61 • deprecated_member_use
+   info • Don't use 'BuildContext's across async gaps • lib/features/auth/presentation/screens/forget_password/forget_password_screen.dart:103:31 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/features/auth/presentation/screens/forget_password/forget_password_screen.dart:114:39 • use_build_context_synchronously
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/login/login_screen.dart:97:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/login/login_screen.dart:112:63 • deprecated_member_use
+   info • Don't use 'BuildContext's across async gaps • lib/features/auth/presentation/screens/login/login_screen.dart:157:33 • use_build_context_synchronously
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/reset_password/reset_password_screen.dart:85:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/reset_password/reset_password_screen.dart:101:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/sign_up/sign_up_screen.dart:83:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/sign_up/sign_up_screen.dart:96:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/sign_up/sign_up_screen.dart:108:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/sign_up/sign_up_screen.dart:120:63 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/presentation/screens/sign_up/sign_up_screen.dart:132:63 • deprecated_member_use
+   info • Missing type annotation • lib/features/layout/cubit/layout_cubit.dart:10:26 • strict_top_level_inference
+   info • Missing type annotation • lib/features/layout/cubit/layout_cubit.dart:15:19 • strict_top_level_inference
+   info • Don't invoke 'print' in production code • lib/features/layout/cubit/layout_cubit.dart:20:5 • avoid_print
+   info • The type name 'layoutModel' isn't an UpperCamelCase identifier • lib/features/layout/domain/model/layout_model.dart:1:7 • camel_case_types
+   info • The type name 'layoutEndpoints' isn't an UpperCamelCase identifier • lib/features/layout/domain/repository/endpoints.dart:1:7 • camel_case_types
+   info • The type name 'layoutRequest' isn't an UpperCamelCase identifier • lib/features/layout/domain/request/layout_request.dart:1:7 • camel_case_types
+   info • 'color' is deprecated and shouldn't be used. Use colorFilter instead • lib/features/layout/presentation/widgets/widgets.dart:92:27 • deprecated_member_use
+   info • Missing type annotation • lib/features/splash/cubit/splash_cubit.dart:11:26 • strict_top_level_inference
+   info • 'cacheColorFilter' is deprecated and shouldn't be used. This no longer does anything • lib/features/splash/presentation/screens/splash/splash.dart:67:19 • deprecated_member_use
+   info • Missing type annotation • lib/features/tasks/cubit/task_cubit.dart:11:24 • strict_top_level_inference
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/tasks/screens/home_screen.dart:271:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/tasks/screens/task_details_screen.dart:43:54 • deprecated_member_use
+warning • The value of the local variable 'cubit' isn't used • lib/main.dart:69:19 • unused_local_variable
+   info • 'scale' is deprecated and shouldn't be used. Use scaleByVector3, scaleByVector4, or scaleByDouble instead • lib/shared/widgets/animation_build_widget.dart:30:42 • deprecated_member_use
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/autocomplate.dart:142:20 • deprecated_member_use
+   info • 'RawKeyboardListener' is deprecated and shouldn't be used. Use KeyboardListener instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:158:21 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:161:35 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:167:42 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:174:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/autocomplate.dart:360:51 • deprecated_member_use
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: DropDownItem.options, DropDownItem.onChanged • lib/shared/widgets/dropdown.dart:5:7 • must_be_immutable
+warning • The value of the field '_disposed' isn't used • lib/shared/widgets/dropdown.dart:37:8 • unused_field
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: TextFormFieldWidget.focusNode, TextFormFieldWidget.textalign, TextFormFieldWidget.maxLengh, TextFormFieldWidget.textdirection, TextFormFieldWidget.contentPadding, TextFormFieldWidget.borderRadius, TextFormFieldWidget.hintSize, TextFormFieldWidget.prefixIcon, TextFormFieldWidget.suffixIcon, TextFormFieldWidget.suffixWidget, TextFormFieldWidget.prefixWidget, TextFormFieldWidget.controller, TextFormFieldWidget.inputDecoration, TextFormFieldWidget.onChanged, TextFormFieldWidget.onSaved, TextFormFieldWidget.onFieldSubmitted, TextFormFieldWidget.validator, TextFormFieldWidget.isOutline, TextFormFieldWidget.enable, TextFormFieldWidget.readOnly • lib/shared/widgets/edit_text_widget.dart:15:7 • must_be_immutable
+warning • The value of the field '_selectedDate' isn't used • lib/shared/widgets/edit_text_widget.dart:340:13 • unused_field
+   info • Don't invoke 'print' in production code • lib/shared/widgets/edit_text_widget.dart:379:13 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/edit_text_widget.dart:437:66 • deprecated_member_use
+   info • 'color' is deprecated and shouldn't be used. Use colorFilter instead • lib/shared/widgets/empty_widget.dart:28:62 • deprecated_member_use
+   info • The file name 'myLoading.dart' isn't a lower_case_with_underscores identifier • lib/shared/widgets/myLoading.dart:1:1 • file_names
+warning • The value of the field '_isLoading' isn't used • lib/shared/widgets/paged_autocomplete.dart:89:8 • unused_field
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/paged_autocomplete.dart:158:20 • deprecated_member_use
+   info • 'RawKeyboardListener' is deprecated and shouldn't be used. Use KeyboardListener instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:174:21 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:177:35 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:183:42 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:190:42 • deprecated_member_use
+   info • Don't invoke 'print' in production code • lib/shared/widgets/paged_autocomplete.dart:308:7 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/paged_autocomplete.dart:341:43 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/paged_autocomplete.dart:364:49 • deprecated_member_use
+warning • Dead code • lib/shared/widgets/paged_multi_select_checkbo.dart:110:37 • dead_code
+warning • The left operand can't be null, so the right operand is never executed • lib/shared/widgets/paged_multi_select_checkbo.dart:110:40 • dead_null_aware_expression
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/paged_multi_select_checkbo.dart:132:15 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/paged_multi_select_checkbo.dart:202:46 • deprecated_member_use
+warning • The value of the field '_future' isn't used • lib/shared/widgets/paged_multi_select_checkbo.dart:248:20 • unused_field
+   info • Unnecessary use of multiple underscores • lib/shared/widgets/shimer_loading_items.dart:62:26 • unnecessary_underscores
+   info • Unnecessary use of multiple underscores • lib/shared/widgets/shimer_loading_items.dart:99:26 • unnecessary_underscores
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: LoadingImage.h, LoadingImage.w • lib/shared/widgets/shimer_loading_items.dart:155:7 • must_be_immutable
+   info • The file name 'svgIcon.dart' isn't a lower_case_with_underscores identifier • lib/shared/widgets/svgIcon.dart:1:1 • file_names
+   info • 'color' is deprecated and shouldn't be used. Use colorFilter instead • lib/shared/widgets/svgIcon.dart:16:9 • deprecated_member_use
+warning • The value of the field '_overlayEntry' isn't used • lib/shared/widgets/test_multi.dart:36:17 • unused_field
+warning • The value of the field '_overlayPortal' isn't used • lib/shared/widgets/test_multi.dart:37:18 • unused_field
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/test_multi.dart:91:13 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/test_multi.dart:271:46 • deprecated_member_use
+warning • The dev dependency on change_app_package_name is unnecessary because there is also a normal dependency on that package • pubspec.yaml:127:3 • unnecessary_dev_dependency
+
+277 issues found. (ran in 5.0s)
