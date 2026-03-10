@@ -88,6 +88,15 @@ class TaskCubit extends Cubit<int> {
     await col.doc(id).delete();
   }
 
+  Stream<TaskModel?> getTaskStream(String id) {
+    final col = _tasksCol;
+    if (col == null) return Stream.value(null);
+    return col.doc(id).snapshots().map((snap) {
+      if (!snap.exists || snap.data() == null) return null;
+      return TaskModel.fromMap(snap.id, snap.data()!);
+    });
+  }
+
   Future<void> toggleComplete(String id, bool isCompleted) async {
     final col = _tasksCol;
     if (col == null) return;

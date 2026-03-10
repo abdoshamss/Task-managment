@@ -52,7 +52,7 @@ class _TaskFlowHomeScreenState extends State<TaskFlowHomeScreen> {
                   style: const TextStyle(color: AppColors.primary),
                 ),
               ),
-            ),
+            ), 
         ],
       ),
       body: _currentIndex == 0
