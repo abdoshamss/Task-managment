@@ -6,7 +6,6 @@ import '../../../shared/widgets/item_of_contact.dart';
 import '../../localization/localization_helper.dart';
 import '../../utils/utils.dart';
 import '../alerts.dart';
-import '../../Router/navigation_helper.dart';
 
 class AlertOfMedia extends StatelessWidget {
   const AlertOfMedia({
@@ -25,7 +24,7 @@ class AlertOfMedia extends StatelessWidget {
   ) async {
     try {
       final File? selectedMedia = await pickMedia();
-      NavigationService.pop(); // Close the dialog
+      Navigator.pop(context); // Close the dialog
       if (selectedMedia != null) {
         onMediaSelected?.call(selectedMedia);
       } else {
@@ -35,7 +34,7 @@ class AlertOfMedia extends StatelessWidget {
         );
       }
     } catch (e) {
-      NavigationService.pop();
+      Navigator.pop(context);
       Alerts.snack(
         state: SnackState.failed,
         text: LocalizationHelper.tr.mediaPickError,

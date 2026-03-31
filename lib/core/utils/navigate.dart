@@ -34,7 +34,7 @@ void navigateHero({required BuildContext context, required Widget route}) {
     PageRouteBuilder(
       transitionDuration: Duration(milliseconds: 300),
       reverseTransitionDuration: Duration(milliseconds: 300),
-      pageBuilder: (_, __, ___) => route,
+      pageBuilder: (_, _, _) => route,
     ),
   );
 }

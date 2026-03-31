@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_mangment/features/auth/screens/login_screen.dart';
 
-import '../../../../../core/Router/Router.dart';
 import '../../../../../core/app_strings/app_strings.dart';
 import '../../../../../core/extensions/all_extensions.dart';
 import '../../../../../core/utils/extentions.dart';
@@ -35,7 +35,12 @@ class OnboardingScreen extends StatelessWidget {
                     ),
                     child: TextButtonWidget(
                       function: () {
-                        Navigator.pushNamed(context, Routes.loginScreen);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginScreen(),
+                          ),
+                        );
                       },
                       text: AppStrings.skip,
                       fontweight: FontWeight.w400,
@@ -48,7 +53,13 @@ class OnboardingScreen extends StatelessWidget {
                   ButtonWidget(
                     onTap: () {
                       if (cubit.sliderIndex == 2) {
-                        Navigator.pushNamed(context, Routes.loginScreen);
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginScreen(),
+                          ),
+                          (route) => false,
+                        );
                       } else {
                         cubit.controller.nextPage(
                           duration: const Duration(milliseconds: 300),

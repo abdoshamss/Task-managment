@@ -1,33 +1,15 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 
 class LoggingRouteObserver extends RouteObserver<PageRoute<dynamic>> {
-  void _logRouteEvent(String eventType, PageRoute<dynamic> route) {
-    final routeName = route.settings.name ?? 'Unknown';
-    log("[$eventType], current route ==> $routeName", name: "Route Name");
-  }
-
   @override
-  void didPush(Route route, Route? previousRoute) {
+  void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
     super.didPush(route, previousRoute);
-    if (route is PageRoute) {
-      _logRouteEvent("PUSH", route);
-    }
+    debugPrint('New route pushed: ${route.settings.name}');
   }
 
   @override
-  void didPop(Route route, Route? previousRoute) {
+  void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) {
     super.didPop(route, previousRoute);
-    if (previousRoute is PageRoute) {
-      _logRouteEvent("POP", previousRoute);
-    }
-  }
-
-  @override
-  void didReplace({Route? newRoute, Route? oldRoute}) {
-    super.didReplace(newRoute: newRoute, oldRoute: oldRoute);
-    if (newRoute is PageRoute) {
-      _logRouteEvent("REPLACE", newRoute);
-    }
+    debugPrint('Route popped: ${route.settings.name}');
   }
 }

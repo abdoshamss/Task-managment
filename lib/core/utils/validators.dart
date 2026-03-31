@@ -6,8 +6,9 @@ class Validators {
 
   /// Returns error message if invalid, null if valid.
   static String? email(String? value) {
-    if (value == null || value.trim().isEmpty)
+    if (value == null || value.trim().isEmpty) {
       return null; // use required separately
+    }
     final emailRegex = RegExp(
       r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
     );

@@ -7,7 +7,6 @@ import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
 import '../cubit/firebase_auth_cubit.dart';
-import 'forgot_password_screen.dart';
 import 'register_screen.dart';
 import '../../tasks/screens/home_screen.dart';
 
@@ -131,22 +130,22 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
-                const Gap(12),
-                Align(
-                  alignment: Directionality.of(context) == TextDirection.ltr
-                      ? Alignment.centerRight
-                      : Alignment.centerLeft,
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const ForgotPasswordScreen(),
-                        ),
-                      );
-                    },
-                    child: Text(l10n.forgotPassword),
-                  ),
-                ),
+                // const Gap(12),
+                // Align(
+                //   alignment: Directionality.of(context) == TextDirection.ltr
+                //       ? Alignment.centerRight
+                //       : Alignment.centerLeft,
+                //   child: TextButton(
+                //     onPressed: () {
+                //       Navigator.of(context).push(
+                //         MaterialPageRoute(
+                //           builder: (_) => const ForgotPasswordScreen(),
+                //         ),
+                //       );
+                //     },
+                //     child: Text(l10n.forgotPassword),
+                //   ),
+                // ),
                 const Gap(24),
                 BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
                   buildWhen: (p, c) =>

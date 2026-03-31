@@ -7,14 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'core/Router/logging_route_observer.dart';
-import 'core/Router/navigation_helper.dart';
+import 'core/router/logging_route_observer.dart';
+import 'core/router/navigation_helper.dart';
 import 'core/data_source/hive_service.dart';
 import 'core/general/general_cubit.dart';
 import 'core/localization/generated/app_localizations.dart';
 import 'core/localization/localization_helper.dart';
 import 'core/style/app_theme.dart';
-import 'core/Router/Router.dart';
 import 'core/utils/Locator.dart';
 import 'core/utils/general_constants.dart';
 import 'core/utils/responsive_framework_widget.dart';
@@ -23,6 +22,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'features/auth/cubit/firebase_auth_cubit.dart';
 import 'features/tasks/cubit/task_cubit.dart';
+import 'features/splash/presentation/screens/splash/splash.dart';
 
 Future<void> main() async {
   runZonedGuarded(() async {
@@ -102,14 +102,14 @@ class MyApp extends StatelessWidget {
                 );
                 return AppResponsiveWrapper(child: child);
               },
-              onGenerateRoute: RouteGenerator.getRoute,
+              // onGenerateRoute: RouteGenerator.getRoute,
               // themeMode: cubit.isLightMode ? ThemeMode.light : ThemeMode.dark,
               // theme: cubit.isLightMode ? LightTheme.getTheme() : DarkTheme.getTheme(),
               // themeMode: ThemeMode.system,
               // theme: LightTheme.getTheme(),
               // darkTheme: DarkTheme.getTheme(),
               theme: AppThemes().theme.appTheme,
-              initialRoute: Routes.splashScreen,
+              home: const SplashScreen(),
             );
           },
         ),

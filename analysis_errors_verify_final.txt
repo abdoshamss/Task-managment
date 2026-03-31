@@ -1,0 +1,126 @@
+Analyzing task_mangment...                                      
+
+warning • The value of the field '_keyHiveAesCipher' isn't used • lib/core/data_source/hive_service.dart:9:29 • unused_field
+warning • The value of the field '_keyName' isn't used • lib/core/data_source/hive_service.dart:10:23 • unused_field
+warning • The value of the local variable 'cipherKey' isn't used • lib/core/data_source/hive_service.dart:17:20 • unused_local_variable
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:92:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:96:50 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:331:32 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:332:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:342:32 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:343:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:350:30 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/extensions/widget_extensions.dart:351:40 • deprecated_member_use
+   info • Missing type annotation • lib/core/extensions/widget_extensions.dart:522:18 • strict_top_level_inference
+   info • Missing type annotation • lib/core/extensions/widget_extensions.dart:525:20 • strict_top_level_inference
+   info • Missing type annotation • lib/core/general/general_cubit.dart:14:27 • strict_top_level_inference
+   info • Don't use 'BuildContext's across async gaps • lib/core/services/media/alert_of_media.dart:27:21 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/core/services/media/alert_of_media.dart:37:21 • use_build_context_synchronously
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/services/media/item_of_contact.dart:31:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/services/media/item_of_contact.dart:58:35 • deprecated_member_use
+   info • Don't invoke 'print' in production code • lib/core/services/media/media_service.dart:49:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/core/services/media/media_service.dart:68:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/core/services/media/media_service.dart:88:7 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/app_theme.dart:45:29 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/app_theme.dart:47:34 • deprecated_member_use
+   info • 'red' is deprecated and shouldn't be used. Use (*.r * 255.0).round().clamp(0, 255) • lib/core/style/app_theme.dart:54:25 • deprecated_member_use
+   info • 'green' is deprecated and shouldn't be used. Use (*.g * 255.0).round().clamp(0, 255) • lib/core/style/app_theme.dart:54:40 • deprecated_member_use
+   info • 'blue' is deprecated and shouldn't be used. Use (*.b * 255.0).round().clamp(0, 255) • lib/core/style/app_theme.dart:54:57 • deprecated_member_use
+   info • 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion • lib/core/style/app_theme.dart:68:32 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/dark_mode/dark_theme.dart:19:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/dark_mode/dark_theme.dart:20:39 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/dark_mode/dark_theme.dart:159:29 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/light_mode/light_theme.dart:18:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/light_mode/light_theme.dart:19:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/style/light_mode/light_theme.dart:171:33 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:26:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:30:59 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:31:57 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:32:53 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/dark_theme.dart:64:18 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:31:47 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:36:59 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:37:57 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:38:54 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:49:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:50:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:51:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:52:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:53:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:54:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:55:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:56:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:57:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:88:49 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:94:18 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:98:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:99:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:100:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:101:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:102:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:103:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:104:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:105:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/light_theme.dart:106:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/theme/theme_manager.dart:49:65 • deprecated_member_use
+warning • Dead code • lib/core/utils/extentions.dart:103:45 • dead_code
+warning • The left operand can't be null, so the right operand is never executed • lib/core/utils/extentions.dart:103:48 • dead_null_aware_expression
+   info • Unnecessary use of multiple underscores • lib/core/utils/navigate.dart:37:24 • unnecessary_underscores
+   info • Unnecessary use of multiple underscores • lib/core/utils/navigate.dart:37:28 • unnecessary_underscores
+   info • Don't invoke 'print' in production code • lib/core/utils/utils.dart:63:5 • avoid_print
+   info • Missing type annotation • lib/core/utils/validations.dart:57:37 • strict_top_level_inference
+   info • Statements in an if should be enclosed in a block • lib/core/utils/validators.dart:10:7 • curly_braces_in_flow_control_structures
+   info • Missing type annotation • lib/features/auth/cubit/auth_cubit.dart:11:24 • strict_top_level_inference
+   info • Missing type annotation • lib/features/auth/cubit/firebase_auth_cubit.dart:14:32 • strict_top_level_inference
+warning • Unused import: 'forgot_password_screen.dart' • lib/features/auth/screens/login_screen.dart:10:8 • unused_import
+   info • Missing type annotation • lib/features/layout/cubit/layout_cubit.dart:10:26 • strict_top_level_inference
+   info • Missing type annotation • lib/features/layout/cubit/layout_cubit.dart:15:19 • strict_top_level_inference
+   info • Don't invoke 'print' in production code • lib/features/layout/cubit/layout_cubit.dart:20:5 • avoid_print
+   info • 'color' is deprecated and shouldn't be used. Use colorFilter instead • lib/features/layout/presentation/widgets/widgets.dart:92:27 • deprecated_member_use
+   info • 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre • lib/features/settings/screens/language_screen.dart:28:13 • deprecated_member_use
+   info • 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre • lib/features/settings/screens/language_screen.dart:29:13 • deprecated_member_use
+   info • 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre • lib/features/settings/screens/language_screen.dart:40:13 • deprecated_member_use
+   info • 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre • lib/features/settings/screens/language_screen.dart:41:13 • deprecated_member_use
+   info • Missing type annotation • lib/features/splash/cubit/splash_cubit.dart:11:26 • strict_top_level_inference
+   info • 'cacheColorFilter' is deprecated and shouldn't be used. This no longer does anything • lib/features/splash/presentation/screens/splash/splash.dart:67:19 • deprecated_member_use
+   info • Missing type annotation • lib/features/tasks/cubit/task_cubit.dart:11:24 • strict_top_level_inference
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/tasks/screens/home_screen.dart:271:37 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/tasks/screens/task_details_screen.dart:77:58 • deprecated_member_use
+warning • The value of the local variable 'cubit' isn't used • lib/main.dart:69:19 • unused_local_variable
+   info • 'scale' is deprecated and shouldn't be used. Use scaleByVector3, scaleByVector4, or scaleByDouble instead • lib/shared/widgets/animation_build_widget.dart:30:42 • deprecated_member_use
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/autocomplate.dart:142:20 • deprecated_member_use
+   info • 'RawKeyboardListener' is deprecated and shouldn't be used. Use KeyboardListener instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:158:21 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:161:35 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:167:42 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/autocomplate.dart:174:42 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/autocomplate.dart:360:51 • deprecated_member_use
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: DropDownItem.options, DropDownItem.onChanged • lib/shared/widgets/dropdown.dart:5:7 • must_be_immutable
+warning • The value of the field '_disposed' isn't used • lib/shared/widgets/dropdown.dart:37:8 • unused_field
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: TextFormFieldWidget.focusNode, TextFormFieldWidget.textalign, TextFormFieldWidget.maxLengh, TextFormFieldWidget.textdirection, TextFormFieldWidget.contentPadding, TextFormFieldWidget.borderRadius, TextFormFieldWidget.hintSize, TextFormFieldWidget.prefixIcon, TextFormFieldWidget.suffixIcon, TextFormFieldWidget.suffixWidget, TextFormFieldWidget.prefixWidget, TextFormFieldWidget.controller, TextFormFieldWidget.inputDecoration, TextFormFieldWidget.onChanged, TextFormFieldWidget.onSaved, TextFormFieldWidget.onFieldSubmitted, TextFormFieldWidget.validator, TextFormFieldWidget.isOutline, TextFormFieldWidget.enable, TextFormFieldWidget.readOnly • lib/shared/widgets/edit_text_widget.dart:15:7 • must_be_immutable
+warning • The value of the field '_selectedDate' isn't used • lib/shared/widgets/edit_text_widget.dart:340:13 • unused_field
+   info • Don't invoke 'print' in production code • lib/shared/widgets/edit_text_widget.dart:379:13 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/edit_text_widget.dart:437:66 • deprecated_member_use
+   info • 'color' is deprecated and shouldn't be used. Use colorFilter instead • lib/shared/widgets/empty_widget.dart:28:62 • deprecated_member_use
+warning • The value of the field '_isLoading' isn't used • lib/shared/widgets/paged_autocomplete.dart:89:8 • unused_field
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/paged_autocomplete.dart:158:20 • deprecated_member_use
+   info • 'RawKeyboardListener' is deprecated and shouldn't be used. Use KeyboardListener instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:174:21 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:177:35 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:183:42 • deprecated_member_use
+   info • 'isKeyPressed' is deprecated and shouldn't be used. Use HardwareKeyboard.instance.isLogicalKeyPressed instead. This feature was deprecated after v3.18.0-2.0.pre • lib/shared/widgets/paged_autocomplete.dart:190:42 • deprecated_member_use
+   info • Don't invoke 'print' in production code • lib/shared/widgets/paged_autocomplete.dart:308:7 • avoid_print
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/paged_autocomplete.dart:341:43 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/paged_autocomplete.dart:364:49 • deprecated_member_use
+warning • Dead code • lib/shared/widgets/paged_multi_select_checkbo.dart:110:37 • dead_code
+warning • The left operand can't be null, so the right operand is never executed • lib/shared/widgets/paged_multi_select_checkbo.dart:110:40 • dead_null_aware_expression
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/paged_multi_select_checkbo.dart:132:15 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/paged_multi_select_checkbo.dart:202:46 • deprecated_member_use
+warning • The value of the field '_future' isn't used • lib/shared/widgets/paged_multi_select_checkbo.dart:248:20 • unused_field
+   info • Unnecessary use of multiple underscores • lib/shared/widgets/shimer_loading_items.dart:62:26 • unnecessary_underscores
+   info • Unnecessary use of multiple underscores • lib/shared/widgets/shimer_loading_items.dart:99:26 • unnecessary_underscores
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: LoadingImage.h, LoadingImage.w • lib/shared/widgets/shimer_loading_items.dart:155:7 • must_be_immutable
+   info • 'color' is deprecated and shouldn't be used. Use colorFilter instead • lib/shared/widgets/svgIcon.dart:16:9 • deprecated_member_use
+warning • The value of the field '_overlayEntry' isn't used • lib/shared/widgets/test_multi.dart:36:17 • unused_field
+warning • The value of the field '_overlayPortal' isn't used • lib/shared/widgets/test_multi.dart:37:18 • unused_field
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/shared/widgets/test_multi.dart:91:13 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/shared/widgets/test_multi.dart:271:46 • deprecated_member_use
+

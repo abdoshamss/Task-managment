@@ -1,10 +1,11 @@
 import 'dart:async';
 import 'dart:developer';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:task_mangment/features/auth/screens/login_screen.dart';
 
-import '../Router/Router.dart';
-import '../Router/navigation_helper.dart';
+import '../router/navigation_helper.dart';
 import '../localization/localization_helper.dart';
 import '../services/alerts.dart';
 import '../../shared/widgets/myLoading.dart';
@@ -270,7 +271,10 @@ class DioService {
   void _handleUnauthenticated() async {
     await Utils.dataManager.deleteUserData();
     if (!NavigationService.context.mounted) return;
-    NavigationService.pushNamedAndRemoveUntil(Routes.loginScreen);
+    Navigator.push(
+      NavigationService.context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+    );
   }
 }
 

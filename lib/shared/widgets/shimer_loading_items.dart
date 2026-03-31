@@ -59,7 +59,7 @@ class ProductsLoadnigItem extends StatelessWidget {
           crossAxisCount: 2,
         ),
         itemCount: 4,
-        itemBuilder: (_, __) => Padding(
+        itemBuilder: (_, _) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -96,7 +96,7 @@ class ImagesLoadnigItem extends StatelessWidget {
           mainAxisExtent: 100,
         ),
         itemCount: 6,
-        itemBuilder: (_, __) =>
+        itemBuilder: (_, _) =>
             Container(width: 70.0, height: 100.0, color: Colors.white),
       ),
     );

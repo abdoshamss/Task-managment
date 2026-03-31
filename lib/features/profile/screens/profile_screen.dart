@@ -10,6 +10,8 @@ import '../screens/edit_profile_screen.dart';
 import '../../tasks/cubit/task_cubit.dart';
 import '../../tasks/models/task_model.dart';
 
+import '../widgets/stat_card.dart';
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
@@ -57,9 +59,9 @@ class ProfileScreen extends StatelessWidget {
               return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  _StatCard(label: l10n.totalTasks, value: '${list.length}'),
-                  _StatCard(label: l10n.completedCount, value: '$completed'),
-                  _StatCard(label: l10n.pendingCount, value: '$pending'),
+                  StatCard(label: l10n.totalTasks, value: '${list.length}'),
+                  StatCard(label: l10n.completedCount, value: '$completed'),
+                  StatCard(label: l10n.pendingCount, value: '$pending'),
                 ],
               );
             },
@@ -107,7 +109,7 @@ class ProfileScreen extends StatelessWidget {
               );
               if (confirm == true && context.mounted) {
                 await context.read<FirebaseAuthCubit>().logout();
-                if (context.mounted) {
+                if (confirm == true && context.mounted) {
                   Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(builder: (_) => const LoginScreen()),
                     (_) => false,
@@ -117,31 +119,6 @@ class ProfileScreen extends StatelessWidget {
             },
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _StatCard extends StatelessWidget {
-  const _StatCard({required this.label, required this.value});
-  final String label, value;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        child: Column(
-          children: [
-            Text(value, style: Theme.of(context).textTheme.titleLarge),
-            const Gap(4),
-            Text(
-              label,
-              style: Theme.of(context).textTheme.bodySmall,
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
       ),
     );
   }

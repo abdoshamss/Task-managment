@@ -7,7 +7,7 @@ import 'package:file_picker/file_picker.dart';
 
 import '../../../shared/widgets/customtext.dart';
 import '../../../shared/widgets/button_widget.dart';
-import '../../Router/navigation_helper.dart';
+import '../../router/navigation_helper.dart';
 import '../../localization/localization_helper.dart';
 
 class MediaService {

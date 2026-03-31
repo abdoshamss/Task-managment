@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../core/utils/Locator.dart';
-import '../../../core/data_source/dio_helper.dart';
 import '../domain/model/splash_model.dart';
-import '../domain/repository/splash_repository.dart';
 import 'splash_states.dart';
 
 class SplashCubit extends Cubit<SplashStates> {
   SplashCubit() : super(SplashInitial());
   static SplashCubit get(context) => BlocProvider.of(context);
-
-  SplashRepository splashRepository = SplashRepository(locator<DioService>());
 
   List<OnBoardingModel> onboardingModel = [
     OnBoardingModel(

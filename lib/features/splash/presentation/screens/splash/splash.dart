@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../../core/Router/Router.dart';
 import '../../../../../core/utils/extentions.dart';
 import '../../../cubit/splash_cubit.dart';
 import '../../../cubit/splash_states.dart';
+import '../on_boarding/on_boarding_screen.dart';
 
 ///// put it in routes
 ///  import '../../modules/splash/presentation/splash.dart';
@@ -53,11 +53,12 @@ class _SplashScreenState extends State<SplashScreen>
                 enabled: true,
                 animationFinished: (finished) async {
                   if (mounted) {
-                    // Prevent memory leaks
-                    Navigator.pushReplacementNamed(
+                    Navigator.push(
                       context,
-                      Routes.onboardingScreen,
-                    ); // Use replacement to clear stack
+                      MaterialPageRoute(
+                        builder: (context) => OnboardingScreen(),
+                      ),
+                    );
                   }
                 },
                 child: SvgPicture.asset(
