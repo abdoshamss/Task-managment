@@ -7,16 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'core/router/logging_route_observer.dart';
-import 'core/router/navigation_helper.dart';
 import 'core/data_source/hive_service.dart';
 import 'core/general/general_cubit.dart';
 import 'core/localization/generated/app_localizations.dart';
 import 'core/localization/localization_helper.dart';
 import 'core/style/app_theme.dart';
-import 'core/utils/Locator.dart';
 import 'core/utils/general_constants.dart';
-import 'core/utils/responsive_framework_widget.dart';
 import 'core/utils/utils.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -24,6 +20,7 @@ import 'features/auth/cubit/firebase_auth_cubit.dart';
 import 'features/tasks/cubit/task_cubit.dart';
 import 'features/splash/presentation/screens/splash/splash.dart';
 
+GlobalKey<NavigatorState>? navigatorKeyy = GlobalKey<NavigatorState>();
 Future<void> main() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +31,7 @@ Future<void> main() async {
     await HiveService.init([GeneralConstants.appBoxName]);
 
     // بعد كده سجل بقية الخدمات
-    await setupLocator();
+    // await setupLocator();
 
     // bloc observer
     Bloc.observer = MyBlocObserver();
@@ -56,9 +53,9 @@ class MyApp extends StatelessWidget {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (_) => locator<GeneralCubit>()),
           BlocProvider(create: (_) => FirebaseAuthCubit()),
           BlocProvider(create: (_) => TaskCubit()),
+          BlocProvider(create: (_) => GeneralCubit()),
         ],
         child: BlocConsumer<GeneralCubit, GeneralState>(
           listener: (context, state) {
@@ -68,8 +65,7 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             final cubit = GeneralCubit.get(context);
             return MaterialApp(
-              title: 'Retm',
-              navigatorObservers: [LoggingRouteObserver()],
+              title: 'Task Flow',
               themeAnimationDuration: const Duration(milliseconds: 700),
               themeAnimationCurve: Curves.easeInOutCubic,
               debugShowCheckedModeBanner: false,
@@ -87,7 +83,7 @@ class MyApp extends StatelessWidget {
                 }
                 return supportedLocales.first;
               },
-              navigatorKey: NavigationService.navigatorKey,
+              navigatorKey: navigatorKeyy,
 
               supportedLocales: AppLocalizations.supportedLocales,
               builder: (_, child) {
@@ -100,7 +96,7 @@ class MyApp extends StatelessWidget {
                       ? SystemUiOverlayStyle.dark
                       : SystemUiOverlayStyle.light,
                 );
-                return AppResponsiveWrapper(child: child);
+                return child;
               },
               // onGenerateRoute: RouteGenerator.getRoute,
               // themeMode: cubit.isLightMode ? ThemeMode.light : ThemeMode.dark,

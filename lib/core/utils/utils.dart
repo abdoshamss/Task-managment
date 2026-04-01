@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'dart:math';
-import '../data_source/hive_helper.dart';
+
 import '../data_source/hive_service.dart';
-import '../services/media/media_service.dart';
 import '../style/app_theme.dart';
 import '../style/base_theme.dart';
 import '../style/light_mode/light_theme_colors.dart';
 import 'general_constants.dart';
-import 'locator.dart';
-import 'validations.dart';
 
 class Utils {
   static String token = '';
@@ -19,10 +16,6 @@ class Utils {
   // static UserModel userModel = UserModel();
 
   static GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-
-  static Validation get valid => locator<Validation>();
-  static MediaService get media => locator<MediaService>();
-  static DataManager get dataManager => locator<DataManager>();
 
   static Future<void> saveUserInHive(Map<String, dynamic> response) async {
     // userModel = UserModel.fromJson(response);

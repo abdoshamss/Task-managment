@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
@@ -74,14 +73,14 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 return r != null ? l10n.requiredField : null;
               },
             ),
-            const Gap(16),
+            const SizedBox(height: 16),
             TextFormFieldWidget(
               controller: _descController,
               hintText: l10n.taskDescription,
               label: l10n.taskDescription,
               maxLines: 3,
             ),
-            const Gap(16),
+            const SizedBox(height: 16),
             ListTile(
               title: Text(l10n.dueDate),
               subtitle: Text(
@@ -90,9 +89,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               trailing: const Icon(Icons.calendar_today),
               onTap: _pickDate,
             ),
-            const Gap(16),
+            const SizedBox(height: 16),
             Text(l10n.priority, style: Theme.of(context).textTheme.titleSmall),
-            const Gap(8),
+            const SizedBox(height: 8),
             Row(
               children: [
                 Expanded(
@@ -103,7 +102,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                     onTap: () => setState(() => _priority = 'low'),
                   ),
                 ),
-                const Gap(8),
+                const SizedBox(width: 8),
                 Expanded(
                   child: _PriorityChip(
                     label: l10n.medium,
@@ -112,7 +111,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                     onTap: () => setState(() => _priority = 'medium'),
                   ),
                 ),
-                const Gap(8),
+                const SizedBox(width: 8),
                 Expanded(
                   child: _PriorityChip(
                     label: l10n.high,
@@ -123,7 +122,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 ),
               ],
             ),
-            const Gap(32),
+            const SizedBox(height: 32),
             ButtonWidget(
               title: l10n.save,
               onTap: _loading ? null : _save,

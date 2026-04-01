@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class StatCard extends StatelessWidget {
   const StatCard({super.key, required this.label, required this.value});
@@ -13,7 +12,7 @@ class StatCard extends StatelessWidget {
         child: Column(
           children: [
             Text(value, style: Theme.of(context).textTheme.titleLarge),
-            const Gap(4),
+            const SizedBox(height: 4),
             Text(
               label,
               style: Theme.of(context).textTheme.bodySmall,

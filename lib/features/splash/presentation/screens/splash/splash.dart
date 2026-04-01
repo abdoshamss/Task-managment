@@ -2,12 +2,11 @@ import 'package:animated_widgets_flutter/widgets/opacity_animated.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task_mangment/shared/widgets/default_image_widget.dart';
 
-import '../../../../../core/utils/extentions.dart';
 import '../../../cubit/splash_cubit.dart';
 import '../../../cubit/splash_states.dart';
-import '../on_boarding/on_boarding_screen.dart';
+import '../../../on_boarding/on_boarding_screen.dart';
 
 ///// put it in routes
 ///  import '../../modules/splash/presentation/splash.dart';
@@ -61,12 +60,7 @@ class _SplashScreenState extends State<SplashScreen>
                     );
                   }
                 },
-                child: SvgPicture.asset(
-                  "app_logo".svg('icons'),
-                  width: 200, // Constrain size
-                  height: 250,
-                  cacheColorFilter: true, // Enable caching
-                ),
+                child: DefaultImageWidget(""),
               ),
             );
           },

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
@@ -94,7 +93,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Gap(24),
+                const SizedBox(height: 24),
                 TextFormFieldWidget(
                   controller: _nameController,
                   label: l10n.fullName,
@@ -103,7 +102,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ? l10n.requiredField
                       : null,
                 ),
-                const Gap(16),
+                const SizedBox(height: 16),
                 TextFormFieldWidget(
                   controller: _emailController,
                   label: l10n.email,
@@ -117,7 +116,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     return null;
                   },
                 ),
-                const Gap(16),
+                const SizedBox(height: 16),
                 TextFormFieldWidget(
                   controller: _passwordController,
                   label: l10n.password,
@@ -130,7 +129,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     return null;
                   },
                 ),
-                const Gap(16),
+                const SizedBox(height: 16),
                 TextFormFieldWidget(
                   controller: _confirmPasswordController,
                   label: l10n.confirmPasswordLabel,
@@ -146,7 +145,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     return null;
                   },
                 ),
-                const Gap(32),
+                const SizedBox(height: 32),
                 BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
                   buildWhen: (p, c) =>
                       c is FirebaseAuthLoading || p is FirebaseAuthLoading,
@@ -165,7 +164,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     );
                   },
                 ),
-                const Gap(24),
+                const SizedBox(height: 24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

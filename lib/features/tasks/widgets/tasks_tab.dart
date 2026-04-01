@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gap/gap.dart';
 
 import '../../../core/localization/generated/app_localizations.dart';
 import '../cubit/task_cubit.dart';
@@ -47,6 +46,7 @@ class TasksTab extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(
+                spacing: 8,
                 children: [
                   CustomFilterChip(
                     label: l10n.all,
@@ -54,21 +54,21 @@ class TasksTab extends StatelessWidget {
                     selected: priorityFilter == 'all',
                     onSelected: onFilterChanged,
                   ),
-                  const Gap(8),
+
                   CustomFilterChip(
                     label: l10n.low,
                     value: 'low',
                     selected: priorityFilter == 'low',
                     onSelected: onFilterChanged,
                   ),
-                  const Gap(8),
+
                   CustomFilterChip(
                     label: l10n.medium,
                     value: 'medium',
                     selected: priorityFilter == 'medium',
                     onSelected: onFilterChanged,
                   ),
-                  const Gap(8),
+
                   CustomFilterChip(
                     label: l10n.high,
                     value: 'high',

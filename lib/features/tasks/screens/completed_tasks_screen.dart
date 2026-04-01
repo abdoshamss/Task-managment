@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../cubit/task_cubit.dart';
@@ -35,7 +34,7 @@ class CompletedTasksScreen extends StatelessWidget {
                   size: 80,
                   color: Theme.of(context).colorScheme.outline,
                 ),
-                const Gap(16),
+                const SizedBox(height: 16),
                 Text(
                   l10n.completedTasks,
                   style: Theme.of(context).textTheme.bodyLarge,

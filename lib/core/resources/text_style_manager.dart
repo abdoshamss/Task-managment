@@ -90,10 +90,7 @@ class InputDecorations {
       filled: true,
       hintText: hint,
       fillColor: fillColor,
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: AppSize.s16,
-        vertical: AppSize.s16,
-      ),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       hintStyle: TextStylesManager.gessRegular.s16.ellipsis.setColor(
         LightThemeColors.textHint,
       ),

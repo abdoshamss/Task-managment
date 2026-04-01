@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../auth/cubit/firebase_auth_cubit.dart';
@@ -25,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
       padding: const EdgeInsets.all(24),
       child: Column(
         children: [
-          const Gap(16),
+          const SizedBox(height: 16),
           CircleAvatar(
             radius: 50,
             backgroundColor: Theme.of(context).colorScheme.primaryContainer,
@@ -40,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(12),
+          const SizedBox(height: 12),
           if (user?.displayName != null && user!.displayName!.isNotEmpty)
             Text(
               user.displayName!,
@@ -48,7 +47,7 @@ class ProfileScreen extends StatelessWidget {
             ),
           if (user?.email != null)
             Text(user!.email, style: Theme.of(context).textTheme.bodyMedium),
-          const Gap(24),
+          const SizedBox(height: 24),
           // إحصائيات من الـ stream
           StreamBuilder<List<TaskModel>>(
             stream: taskCubit.getTasksStream(),
@@ -66,7 +65,7 @@ class ProfileScreen extends StatelessWidget {
               );
             },
           ),
-          const Gap(24),
+          const SizedBox(height: 24),
           ButtonWidget(
             title: l10n.editProfile,
             onTap: () async {
@@ -78,14 +77,14 @@ class ProfileScreen extends StatelessWidget {
               }
             },
           ),
-          const Gap(12),
+          const SizedBox(height: 12),
           ButtonWidget(
             title: l10n.settings,
             onTap: () => Navigator.of(
               context,
             ).push(MaterialPageRoute(builder: (_) => const SettingsScreen())),
           ),
-          const Gap(12),
+          const SizedBox(height: 12),
           ButtonWidget(
             title: l10n.logout,
             buttonColor: Theme.of(context).colorScheme.error,

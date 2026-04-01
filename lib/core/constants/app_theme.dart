@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'app_colors.dart';
+ import 'app_colors.dart';
 
 /// TaskFlow Material Design 3 themes (light & dark).
 class AppTheme {
@@ -17,17 +16,12 @@ class AppTheme {
         error: AppColors.error,
       ),
       scaffoldBackgroundColor: AppColors.background,
-      textTheme: _textTheme(Brightness.light),
-      appBarTheme: AppBarTheme(
+       appBarTheme: AppBarTheme(
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.surface,
         foregroundColor: AppColors.onPrimaryContainer,
-        titleTextStyle: GoogleFonts.roboto(
-          fontSize: 22,
-          fontWeight: FontWeight.w600,
-          color: AppColors.onPrimaryContainer,
-        ),
+
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary,
@@ -60,17 +54,12 @@ class AppTheme {
         error: AppColors.error,
       ),
       scaffoldBackgroundColor: AppColors.backgroundDark,
-      textTheme: _textTheme(Brightness.dark),
-      appBarTheme: AppBarTheme(
+       appBarTheme: AppBarTheme(
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.surfaceDark,
         foregroundColor: Colors.white,
-        titleTextStyle: GoogleFonts.roboto(
-          fontSize: 22,
-          fontWeight: FontWeight.w600,
-          color: Colors.white,
-        ),
+
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary,
@@ -92,10 +81,5 @@ class AppTheme {
     );
   }
 
-  static TextTheme _textTheme(Brightness brightness) {
-    final base = brightness == Brightness.light
-        ? GoogleFonts.robotoTextTheme(ThemeData.light().textTheme)
-        : GoogleFonts.robotoTextTheme(ThemeData.dark().textTheme);
-    return base;
-  }
+
 }

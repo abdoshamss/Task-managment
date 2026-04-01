@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
-import '../../../../core/constants/app_colors.dart';
+ import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import 'login_screen.dart';
 import '../../tasks/screens/home_screen.dart';
@@ -82,14 +80,10 @@ class _SplashScreenState extends State<SplashScreen>
                 size: 80,
                 color: AppColors.primary,
               ),
-              const Gap(24),
+              const SizedBox(height: 24),
               Text(
                 l10n.appName,
-                style: GoogleFonts.roboto(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.primary,
-                ),
+
               ),
             ],
           ),

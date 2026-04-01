@@ -5,12 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../core/resources/font_manager.dart';
-import '../../core/services/media/alert_of_media.dart';
-import '../../core/utils/utils.dart';
-import '../../core/services/alerts.dart';
 import '../../core/theme/light_theme.dart';
 import '../../core/extensions/all_extensions.dart';
-import 'location_picker_screen.dart';
 
 class TextFormFieldWidget extends StatefulWidget {
   final String? hintText, label, errorText;
@@ -239,51 +235,7 @@ class TextFormFieldWidget extends StatefulWidget {
        inputFormatters = null,
        suffixWidget = null,
        type = TextInputType.text;
-  TextFormFieldWidget.mapPicker({
-    super.key,
-    this.onTap,
-    this.onChanged,
-    this.onSaved,
-    this.controller,
-    this.hintText = "Select Location",
-    this.label,
-    this.helperText,
-    this.errorText,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.expanded = false,
-    this.floatingHint = false,
-    this.activeBorderColor = Colors.transparent,
-    this.borderRadius = 15.0,
-    this.borderColor = Colors.transparent,
-    this.backgroundColor = const Color(0xffF6F6F6),
-    this.hintColor = LightThemeColors.textHint,
-    this.inputDecoration,
-    this.contentPadding,
-    this.textdirection,
-    this.onLocationSelected,
-  }) : enableMapPicker = true,
-       enableImagePicker = false,
-       enableFilePicker = false,
-       enableDatePicker = false,
-       onDateSelected = null,
-       onImageSelected = null,
-       onImageDeleted = null,
-       startdate = null,
-       enddate = null,
-       readOnly = true,
-       isOutline = null,
-       hintSize = null,
-       enable = true,
-       prefixWidget = null,
-       password = false,
-       textalign = TextAlign.start,
-       maxLengh = null,
-       maxLines = 1,
-       minLines = 1,
-       inputFormatters = null,
-       suffixWidget = null,
-       type = TextInputType.text;
+
   @override
   State<TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
 }
@@ -293,24 +245,6 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
   LatLng? _pickedLocation;
   List<Placemark>? _placemarks;
   File? pickedImage;
-
-  Future<void> _openLocationPicker() async {
-    final result = await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => LocationPickerScreen()),
-    );
-
-    if (result is List && result.length == 2) {
-      setState(() {
-        _pickedLocation = result[0] as LatLng;
-        _placemarks = result[1] as List<Placemark>;
-        final address = _placemarks?.first;
-        widget.controller?.text =
-            "${address?.name}, ${address?.locality}, ${address?.country}";
-        widget.onLocationSelected?.call(_pickedLocation, address);
-      });
-    }
-  }
 
   void onImageSelected(File? image) {
     if (image != null) {
@@ -324,17 +258,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
 
   List<File>? files = [];
   Future<void> _pickFile() async {
-    files = await Utils.media.pickFiles();
-  }
-
-  Future<void> _pickImage() async {
-    Alerts.bottomSheet(
-      context,
-      child: AlertOfMedia(
-        onCameraSelected: onImageSelected,
-        onGallerySelected: onImageSelected,
-      ),
-    );
+    // files = await Utils.media.pickFiles();
   }
 
   DateTime? _selectedDate; // New state variable for the selected date
@@ -372,17 +296,12 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
               fontSize: 12,
             ),
           ),
-          10.height,
+          SizedBox(height: 12),
         ],
         TextFormField(
           onTap: () {
-            print(widget.enableImagePicker);
-            if (widget.enableMapPicker) {
-              _openLocationPicker();
-            } else if (widget.enableDatePicker) {
+            if (widget.enableDatePicker) {
               _pickDate(); // Open the date picker
-            } else if (widget.enableImagePicker) {
-              _pickImage.call();
             } else if (widget.enableFilePicker) {
               _pickFile.call();
             } else {

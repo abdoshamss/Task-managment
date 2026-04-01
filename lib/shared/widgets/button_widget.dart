@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../shared/widgets/text_widget.dart';
 import '../../core/extensions/all_extensions.dart';
 
 class ButtonWidget extends StatelessWidget {
@@ -62,12 +61,14 @@ class ButtonWidget extends StatelessWidget {
         ),
         child:
             child ??
-            TextWidget(
+            Text(
               title,
-              fontWeight: fontweight ?? FontWeight.w400,
-              fontSize: fontSize ?? 16,
-              fontFamily: fontFamily,
-              color: textColor ?? Colors.white,
+              style: TextStyle(
+                fontWeight: fontweight ?? FontWeight.w500,
+                fontSize: fontSize ?? 16,
+                color: textColor ?? context.secondaryColor,
+              ),
+              //  style: TextStyle(color: AppColors.secondary),
             ),
       ),
     );
@@ -82,14 +83,12 @@ class TextButtonWidget extends StatelessWidget {
     this.fontweight,
     this.color,
     this.size,
-    this.fontFamily,
   });
   final Function function;
   final String text;
   final double? size;
   final Color? color;
   final FontWeight? fontweight;
-  final String? fontFamily;
 
   @override
   Widget build(BuildContext context) {
@@ -97,12 +96,13 @@ class TextButtonWidget extends StatelessWidget {
       onPressed: () {
         function();
       },
-      child: TextWidget(
+      child: Text(
         text,
-        fontWeight: fontweight ?? FontWeight.w500,
-        fontFamily: fontFamily ?? "Almarai",
-        fontSize: size ?? 16,
-        color: color ?? context.secondaryColor,
+        style: TextStyle(
+          fontWeight: fontweight ?? FontWeight.w500,
+          fontSize: size ?? 16,
+          color: color ?? context.secondaryColor,
+        ),
         //  style: TextStyle(color: AppColors.secondary),
       ),
       // style: TextButton.styleFrom(

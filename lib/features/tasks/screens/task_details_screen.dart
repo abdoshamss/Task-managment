@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
@@ -67,7 +66,7 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
                   task.title,
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
-                const Gap(8),
+                const SizedBox(height: 8),
                 Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 12,
@@ -85,27 +84,27 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
                     ),
                   ),
                 ),
-                const Gap(16),
+                const SizedBox(height: 16),
                 Row(
                   children: [
                     Text(
                       l10n.dueDate,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
-                    const Gap(8),
+                    const SizedBox(width: 8),
                     Text(
                       '${task.dueDate.day}/${task.dueDate.month}/${task.dueDate.year}',
                     ),
                   ],
                 ),
-                const Gap(8),
+                const SizedBox(height: 8),
                 Row(
                   children: [
                     Text(
                       l10n.completed,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
-                    const Gap(8),
+                    const SizedBox(width: 8),
                     Switch(
                       value: _isCompleted,
                       onChanged: (v) {
@@ -117,13 +116,13 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
                 ),
                 if (task.description != null &&
                     task.description!.isNotEmpty) ...[
-                  const Gap(16),
+                  const SizedBox(height: 16),
                   Text(
                     task.description!,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
-                const Gap(32),
+                const SizedBox(height: 32),
                 ButtonWidget(
                   title: l10n.edit,
                   onTap: () async {
@@ -134,7 +133,7 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
                     );
                   },
                 ),
-                const Gap(12),
+                const SizedBox(height: 12),
                 ButtonWidget(
                   title: l10n.delete,
                   buttonColor: AppColors.priorityHigh,

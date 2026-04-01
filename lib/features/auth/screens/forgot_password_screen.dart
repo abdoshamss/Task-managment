@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
@@ -81,19 +80,19 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Gap(32),
+                const SizedBox(height: 32),
                 Icon(
                   Icons.lock_reset_rounded,
                   size: 80,
                   color: Theme.of(context).colorScheme.primary,
                 ),
-                const Gap(24),
+                const SizedBox(height: 24),
                 Text(
                   l10n.enterEmailToReset,
                   style: Theme.of(context).textTheme.bodyMedium,
                   textAlign: TextAlign.center,
                 ),
-                const Gap(32),
+                const SizedBox(height: 32),
                 TextFormFieldWidget(
                   controller: _emailController,
                   label: l10n.email,
@@ -107,7 +106,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     return null;
                   },
                 ),
-                const Gap(24),
+                const SizedBox(height: 24),
                 BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
                   buildWhen: (p, c) =>
                       c is ForgotPasswordLoading || p is ForgotPasswordLoading,

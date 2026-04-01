@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../router/navigation_helper.dart';
+import '../../main.dart';
 import '../data_source/hive_service.dart';
 import '../utils/general_constants.dart';
 import 'generated/app_localizations.dart';
@@ -13,12 +13,10 @@ class LocalizationHelper {
   static final LocalizationHelper _instance = LocalizationHelper._();
   factory LocalizationHelper() => _instance;
 
-  static final GlobalKey<NavigatorState> _navigatorKey =
-      NavigationService.navigatorKey;
-  static GlobalKey<NavigatorState> get navigatorKey => _navigatorKey;
+  static GlobalKey<NavigatorState>? get navigatorKey => navigatorKeyy;
 
   static AppLocalizations get tr =>
-      AppLocalizations.of(navigatorKey.currentContext!);
+      AppLocalizations.of(navigatorKey!.currentContext!);
 
   static const String _localeKey = 'app_locale';
 

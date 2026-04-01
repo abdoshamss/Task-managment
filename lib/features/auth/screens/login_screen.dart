@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
-import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
+import '../../../core/utils/validators.dart';
 import '../cubit/firebase_auth_cubit.dart';
 import 'register_screen.dart';
 import '../../tasks/screens/home_screen.dart';
@@ -89,21 +88,21 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Gap(48),
+                const SizedBox(height: 48),
                 Text(
                   l10n.login,
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Gap(8),
+                const SizedBox(height: 8),
                 Text(
                   l10n.appName,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
-                const Gap(40),
+                const SizedBox(height: 40),
                 TextFormFieldWidget(
                   controller: _emailController,
                   label: l10n.email,
@@ -117,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
-                const Gap(16),
+                const SizedBox(height: 16),
                 TextFormFieldWidget(
                   controller: _passwordController,
                   label: l10n.password,
@@ -130,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
-                // const Gap(12),
+                // const SizedBox(height: 12),
                 // Align(
                 //   alignment: Directionality.of(context) == TextDirection.ltr
                 //       ? Alignment.centerRight
@@ -146,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 //     child: Text(l10n.forgotPassword),
                 //   ),
                 // ),
-                const Gap(24),
+                const SizedBox(height: 24),
                 BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
                   buildWhen: (p, c) =>
                       c is FirebaseAuthLoading || p is FirebaseAuthLoading,
@@ -165,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     );
                   },
                 ),
-                const Gap(24),
+                const SizedBox(height: 24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

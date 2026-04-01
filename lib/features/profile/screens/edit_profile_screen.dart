@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:gap/gap.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
@@ -88,7 +87,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Gap(24),
+                const SizedBox(height: 24),
                 Center(
                   child: CircleAvatar(
                     radius: 50,
@@ -107,7 +106,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     ),
                   ),
                 ),
-                const Gap(24),
+                const SizedBox(height: 24),
                 TextFormFieldWidget(
                   controller: _nameController,
                   label: l10n.displayName,
@@ -120,7 +119,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     return null;
                   },
                 ),
-                const Gap(16),
+                const SizedBox(height: 16),
                 TextFormFieldWidget(
                   controller: TextEditingController(text: user?.email ?? ''),
                   label: l10n.email,
@@ -128,7 +127,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   type: TextInputType.emailAddress,
                   enable: false,
                 ),
-                const Gap(32),
+                const SizedBox(height: 32),
                 BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
                   buildWhen: (p, c) =>
                       c is ProfileUpdateLoading || p is ProfileUpdateLoading,

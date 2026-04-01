@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'all_extensions.dart';
-
 bool hasMatch(String? s, String p) {
   return (s == null) ? false : RegExp(p).hasMatch(s);
 }
@@ -57,11 +55,9 @@ extension StringExtension on String? {
     return SizedBox(
       height: height ?? 24,
       width: width ?? 24,
-      child: SvgPicture.asset(
-        validate(),
-        fit: fit,
-        colorFilter: colorFilter,
-      ).center(),
+      child: Center(
+        child: SvgPicture.asset(validate(), fit: fit, colorFilter: colorFilter),
+      ),
     );
   }
 

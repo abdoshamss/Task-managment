@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../localization/generated/app_localizations.dart';
 
 double tabletBreakpointGlobal = 600.0;
 double desktopBreakpointGlobal = 720.0;
@@ -72,6 +73,8 @@ extension ContextExtensions on BuildContext {
   void openDrawer() => Scaffold.of(this).openDrawer();
 
   void openEndDrawer() => Scaffold.of(this).openEndDrawer();
+
+  AppLocalizations get l10n => AppLocalizations.of(this);
 }
 
 extension ThemeExtension on BuildContext {

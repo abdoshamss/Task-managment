@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class TasksEmptyState extends StatelessWidget {
   const TasksEmptyState({super.key, required this.message});
@@ -17,7 +16,7 @@ class TasksEmptyState extends StatelessWidget {
             size: 80,
             color: Theme.of(context).colorScheme.outline,
           ),
-          const Gap(16),
+          const SizedBox(height: 16),
           Text(
             message,
             textAlign: TextAlign.center,

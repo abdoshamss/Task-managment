@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../domain/model/splash_model.dart';
+import '../on_boarding/onboarding_model.dart';
 import 'splash_states.dart';
 
 class SplashCubit extends Cubit<SplashStates> {
   SplashCubit() : super(SplashInitial());
   static SplashCubit get(context) => BlocProvider.of(context);
-
-  List<OnBoardingModel> onboardingModel = [
+  List<OnBoardingModel> get onboardingModel => [
     OnBoardingModel(
-      stackUrl: "Assets.icons.firstOnboardingCover.path",
-      imageUrl: 'Assets.icons.bannerImg.path',
-      title: "AppStrings.onboarding1",
-      subTitle: "AppStrings.onboardingSubtitle1",
+      imageUrl: "assets/images/img1.png",
+      title: "title",
+      subTitle: "subtitle",
     ),
     OnBoardingModel(
-      stackUrl: "Assets.icons.secondOnBoardingCover.path",
-      imageUrl: "Assets.icons.meat.path",
-      title: "AppStrings.onboarding2",
-      subTitle: "AppStrings.onboardingSubtitle2",
+      imageUrl: "assets/images/img2.png",
+      title: "title",
+      subTitle: "subtitle",
     ),
     OnBoardingModel(
-      stackUrl: "Assets.icons.thirdOnboradingCover.path",
-      imageUrl: "Assets.icons.meats.path",
-      title: "AppStrings.onboarding3",
-      subTitle: "AppStrings.onboardingSubtitle2",
+      imageUrl: "assets/images/img3.jpg",
+      title: "title",
+      subTitle: "subtitle",
     ),
   ];
   int sliderIndex = 0;
