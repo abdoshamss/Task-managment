@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
- import 'app_colors.dart';
+import 'app_colors.dart';
 
 /// TaskFlow Material Design 3 themes (light & dark).
 class AppTheme {
@@ -16,12 +16,11 @@ class AppTheme {
         error: AppColors.error,
       ),
       scaffoldBackgroundColor: AppColors.background,
-       appBarTheme: AppBarTheme(
+      appBarTheme: AppBarTheme(
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.surface,
         foregroundColor: AppColors.onPrimaryContainer,
-
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary,
@@ -54,12 +53,11 @@ class AppTheme {
         error: AppColors.error,
       ),
       scaffoldBackgroundColor: AppColors.backgroundDark,
-       appBarTheme: AppBarTheme(
+      appBarTheme: AppBarTheme(
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.surfaceDark,
         foregroundColor: Colors.white,
-
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary,
@@ -80,6 +78,4 @@ class AppTheme {
       ),
     );
   }
-
-
 }

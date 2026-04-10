@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
- import '../../../../core/constants/app_colors.dart';
+import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import 'login_screen.dart';
 import '../../tasks/screens/home_screen.dart';
@@ -81,10 +81,7 @@ class _SplashScreenState extends State<SplashScreen>
                 color: AppColors.primary,
               ),
               const SizedBox(height: 24),
-              Text(
-                l10n.appName,
-
-              ),
+              Text(l10n.appName),
             ],
           ),
         ),

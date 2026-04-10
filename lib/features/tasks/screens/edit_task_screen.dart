@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
- import '../../../../core/localization/generated/app_localizations.dart';
+import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
@@ -86,14 +86,14 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
                   ? l10n.requiredField
                   : null,
             ),
-            SizedBox(height: 16,),
+            SizedBox(height: 16),
             TextFormFieldWidget(
               controller: _descController,
               hintText: l10n.taskDescription,
               label: l10n.taskDescription,
               maxLines: 3,
             ),
-            SizedBox(height: 16,),
+            SizedBox(height: 16),
             ListTile(
               title: Text(l10n.dueDate),
               subtitle: Text(
@@ -102,9 +102,9 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
               trailing: const Icon(Icons.calendar_today),
               onTap: _pickDate,
             ),
-            SizedBox(height: 16,),
+            SizedBox(height: 16),
             Text(l10n.priority, style: Theme.of(context).textTheme.titleSmall),
-            SizedBox(height: 8,),
+            SizedBox(height: 8),
             Row(
               children: [
                 Expanded(
@@ -132,7 +132,8 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 32,),            ButtonWidget(
+            SizedBox(height: 32),
+            ButtonWidget(
               title: l10n.save,
               onTap: _loading ? null : _update,
               child: _loading

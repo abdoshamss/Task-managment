@@ -2,9 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:video_player/video_player.dart';
-import 'package:chewie/chewie.dart';
-import 'package:flutter/services.dart';
 
 enum MediaSource { asset, network, file, unsupported }
 
@@ -74,9 +71,9 @@ class DefaultImageWidget extends StatelessWidget {
       case MediaType.svg:
         child = _buildSvg();
         break;
-      case MediaType.video:
-        child = _buildVideo(context);
-        break;
+      // case MediaType.video:
+      //   child = _buildVideo(context);
+      //   break;
       default:
         child = const Icon(Icons.broken_image, size: 48);
     }
@@ -138,76 +135,5 @@ class DefaultImageWidget extends StatelessWidget {
       );
     }
     return const Icon(Icons.image_not_supported);
-  }
-
-  Widget _buildVideo(BuildContext context) {
-    return _VideoPlayerWrapper(url: path, source: mediaSource);
-  }
-}
-
-class _VideoPlayerWrapper extends StatefulWidget {
-  final String url;
-  final MediaSource source;
-
-  const _VideoPlayerWrapper({required this.url, required this.source});
-
-  @override
-  State<_VideoPlayerWrapper> createState() => _VideoPlayerWrapperState();
-}
-
-class _VideoPlayerWrapperState extends State<_VideoPlayerWrapper> {
-  VideoPlayerController? _controller;
-  ChewieController? _chewieController;
-
-  @override
-  void initState() {
-    super.initState();
-    _initController();
-  }
-
-  void _initController() async {
-    if (widget.source == MediaSource.asset) {
-      _controller = VideoPlayerController.asset(widget.url);
-    } else if (widget.source == MediaSource.network) {
-      _controller = VideoPlayerController.networkUrl(Uri.parse(widget.url));
-    } else {
-      _controller = VideoPlayerController.file(File(widget.url));
-    }
-
-    await _controller!.initialize();
-
-    _chewieController = ChewieController(
-      videoPlayerController: _controller!,
-      autoPlay: false,
-      looping: false,
-      allowFullScreen: true,
-      allowMuting: true,
-      showControls: true,
-      deviceOrientationsAfterFullScreen: [
-        DeviceOrientation.portraitUp,
-        DeviceOrientation.portraitDown,
-      ],
-    );
-
-    setState(() {});
-  }
-
-  @override
-  void dispose() {
-    _chewieController?.dispose();
-    _controller?.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (_chewieController != null && _controller!.value.isInitialized) {
-      return AspectRatio(
-        aspectRatio: _controller!.value.aspectRatio,
-        child: Chewie(controller: _chewieController!),
-      );
-    } else {
-      return const Center(child: CircularProgressIndicator());
-    }
   }
 }
