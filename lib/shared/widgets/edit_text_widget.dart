@@ -2,8 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:geocoding/geocoding.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 import '../../core/resources/font_manager.dart';
 import '../../core/theme/light_theme.dart';
 import '../../core/extensions/all_extensions.dart';
@@ -49,7 +48,6 @@ class TextFormFieldWidget extends StatefulWidget {
 
   final Function(File image)? onImageSelected;
   final Function()? onImageDeleted;
-  final Function(LatLng? latLang, Placemark? placeMark)? onLocationSelected;
 
   TextFormFieldWidget({
     this.onChanged,
@@ -88,8 +86,7 @@ class TextFormFieldWidget extends StatefulWidget {
     this.textdirection,
     this.onImageSelected,
     this.onImageDeleted,
-    this.onLocationSelected,
-    super.key,
+     super.key,
     this.inputFormatters,
     this.helperText,
     this.startdate,
@@ -143,8 +140,8 @@ class TextFormFieldWidget extends StatefulWidget {
        suffixWidget = null,
        type = TextInputType.text,
        onImageSelected = null,
-       onImageDeleted = null,
-       onLocationSelected = null;
+       onImageDeleted = null
+        ;
   TextFormFieldWidget.filePicker({
     super.key,
     this.onTap,
@@ -174,7 +171,7 @@ class TextFormFieldWidget extends StatefulWidget {
        onDateSelected = null,
        onImageSelected = null,
        onImageDeleted = null,
-       onLocationSelected = null,
+
        startdate = null,
        enddate = null,
        readOnly = true,
@@ -219,7 +216,7 @@ class TextFormFieldWidget extends StatefulWidget {
        enableDatePicker = false,
        enableMapPicker = false,
        onDateSelected = null,
-       onLocationSelected = null,
+
        startdate = null,
        enddate = null,
        readOnly = true,
@@ -242,8 +239,7 @@ class TextFormFieldWidget extends StatefulWidget {
 
 class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
   bool passHidden = true;
-  LatLng? _pickedLocation;
-  List<Placemark>? _placemarks;
+
   File? pickedImage;
 
   void onImageSelected(File? image) {
