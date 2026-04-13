@@ -20,6 +20,7 @@ import 'features/auth/cubit/firebase_auth_cubit.dart';
 import 'features/tasks/cubit/task_cubit.dart';
 import 'features/splash/presentation/screens/splash/splash.dart';
 
+//abdoshams2005@gmail.com
 GlobalKey<NavigatorState>? navigatorKeyy = GlobalKey<NavigatorState>();
 Future<void> main() async {
   runZonedGuarded(() async {

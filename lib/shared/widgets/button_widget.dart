@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../core/extensions/all_extensions.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String title;
@@ -46,7 +45,7 @@ class ButtonWidget extends StatelessWidget {
         onPressed: onTap,
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all<Color>(
-            buttonColor ?? context.secondaryColor,
+            buttonColor ?? Colors.blue,
           ),
           overlayColor: WidgetStateProperty.all<Color>(Colors.transparent),
           shadowColor: WidgetStateProperty.all<Color>(Colors.white),
@@ -54,7 +53,7 @@ class ButtonWidget extends StatelessWidget {
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
               side: withBorder
-                  ? BorderSide(color: borderColor ?? context.secondaryColor)
+                  ? BorderSide(color: borderColor ?? Colors.blue)
                   : const BorderSide(color: Colors.transparent),
             ),
           ),
@@ -66,7 +65,7 @@ class ButtonWidget extends StatelessWidget {
               style: TextStyle(
                 fontWeight: fontweight ?? FontWeight.w500,
                 fontSize: fontSize ?? 16,
-                color: textColor ?? context.secondaryColor,
+                color: textColor ?? Colors.blue,
               ),
               //  style: TextStyle(color: AppColors.secondary),
             ),
@@ -101,7 +100,7 @@ class TextButtonWidget extends StatelessWidget {
         style: TextStyle(
           fontWeight: fontweight ?? FontWeight.w500,
           fontSize: size ?? 16,
-          color: color ?? context.secondaryColor,
+          color: color ?? Colors.blue,
         ),
         //  style: TextStyle(color: AppColors.secondary),
       ),

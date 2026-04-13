@@ -1,5 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_mangment/core/theme/light_theme.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
@@ -60,106 +62,204 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
           body: SingleChildScrollView(
             padding: const EdgeInsets.all(24),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  task.title,
-                  style: Theme.of(context).textTheme.headlineSmall,
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  child: Text(
+                    task.title,
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 8),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 6,
-                  ),
-                  decoration: BoxDecoration(
-                    color: _priorityColor(task.priority).withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Text(
-                    task.priority,
-                    style: TextStyle(
-                      color: _priorityColor(task.priority),
-                      fontWeight: FontWeight.w600,
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 100),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: _priorityColor(task.priority).withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Text(
+                      task.priority,
+                      style: TextStyle(
+                        color: _priorityColor(task.priority),
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                 ),
                 const SizedBox(height: 16),
-                Row(
-                  children: [
-                    Text(
-                      l10n.dueDate,
-                      style: Theme.of(context).textTheme.titleSmall,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      '${task.dueDate.day}/${task.dueDate.month}/${task.dueDate.year}',
-                    ),
-                  ],
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 200),
+                  child: Row(
+                    children: [
+                      Text(
+                        l10n.dueDate,
+                        style: Theme.of(context).textTheme.titleSmall,
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        '${task.dueDate.day}/${task.dueDate.month}/${task.dueDate.year}',
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 8),
-                Row(
-                  children: [
-                    Text(
-                      l10n.completed,
-                      style: Theme.of(context).textTheme.titleSmall,
-                    ),
-                    const SizedBox(width: 8),
-                    Switch(
-                      value: _isCompleted,
-                      onChanged: (v) {
-                        setState(() => _isCompleted = v);
-                        taskCubit.toggleComplete(task.id, v);
-                      },
-                    ),
-                  ],
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 300),
+                  child: Row(
+                    children: [
+                      Text(
+                        l10n.completed,
+                        style: Theme.of(context).textTheme.titleSmall,
+                      ),
+                      const SizedBox(width: 8),
+                      Switch(
+                        activeThumbColor: LightThemeColors.primary,
+                        value: _isCompleted,
+                        inactiveTrackColor: LightThemeColors.primary
+                            .withOpacity(.2),
+                        onChanged: (v) {
+                          setState(() => _isCompleted = v);
+                          taskCubit.toggleComplete(task.id, v);
+                        },
+                      ),
+                    ],
+                  ),
                 ),
                 if (task.description != null &&
                     task.description!.isNotEmpty) ...[
                   const SizedBox(height: 16),
-                  Text(
-                    task.description!,
-                    style: Theme.of(context).textTheme.bodyMedium,
+                  FadeInUp(
+                    duration: const Duration(milliseconds: 500),
+                    delay: const Duration(milliseconds: 400),
+                    child: Text(
+                      task.description!,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
                   ),
                 ],
                 const SizedBox(height: 32),
-                ButtonWidget(
-                  title: l10n.edit,
-                  onTap: () async {
-                    await Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => EditTaskScreen(task: task),
-                      ),
-                    );
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 500),
+                  child: ButtonWidget(
+                    title: l10n.edit,
+                    onTap: () async {
+                      await Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => EditTaskScreen(task: task),
+                        ),
+                      );
+                    },
+                  ),
                 ),
                 const SizedBox(height: 12),
-                ButtonWidget(
-                  title: l10n.delete,
-                  buttonColor: AppColors.priorityHigh,
-                  onTap: () async {
-                    final confirm = await showDialog<bool>(
-                      context: context,
-                      builder: (ctx) => AlertDialog(
-                        title: Text(l10n.delete),
-                        content: Text(l10n.deleteConfirm),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.pop(ctx, false),
-                            child: Text(l10n.cancel),
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 600),
+                  child: ButtonWidget(
+                    title: l10n.delete,
+                    buttonColor: AppColors.priorityHigh,
+                    onTap: () async {
+                      final confirm = await showDialog<bool>(
+                        context: context,
+                        builder: (ctx) => ZoomIn(
+                          duration: const Duration(milliseconds: 300),
+                          child: Dialog(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(24),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    Icons.delete_forever_rounded,
+                                    size: 64,
+                                    color: Theme.of(context).colorScheme.error,
+                                  ),
+                                  const SizedBox(height: 16),
+                                  Text(
+                                    l10n.delete,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall
+                                        ?.copyWith(fontWeight: FontWeight.bold),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    l10n.deleteConfirm,
+                                    textAlign: TextAlign.center,
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.bodyMedium,
+                                  ),
+                                  const SizedBox(height: 24),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: OutlinedButton(
+                                          style: OutlinedButton.styleFrom(
+                                            padding: const EdgeInsets.symmetric(
+                                              vertical: 12,
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(12),
+                                            ),
+                                          ),
+                                          onPressed: () =>
+                                              Navigator.pop(ctx, false),
+                                          child: Text(l10n.cancel),
+                                        ),
+                                      ),
+                                      const SizedBox(width: 12),
+                                      Expanded(
+                                        child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Theme.of(
+                                              context,
+                                            ).colorScheme.error,
+                                            foregroundColor: Colors.white,
+                                            elevation: 0,
+                                            padding: const EdgeInsets.symmetric(
+                                              vertical: 12,
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(12),
+                                            ),
+                                          ),
+                                          onPressed: () =>
+                                              Navigator.pop(ctx, true),
+                                          child: Text(l10n.delete),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
-                          TextButton(
-                            onPressed: () => Navigator.pop(ctx, true),
-                            child: Text(l10n.delete),
-                          ),
-                        ],
-                      ),
-                    );
-                    if (confirm == true && context.mounted) {
-                      await taskCubit.deleteTask(task.id);
-                      if (context.mounted) Navigator.of(context).pop();
-                    }
-                  },
+                        ),
+                      );
+                      if (confirm == true && context.mounted) {
+                        await taskCubit.deleteTask(task.id);
+                        if (context.mounted) Navigator.of(context).pop();
+                      }
+                    },
+                  ),
                 ),
               ],
             ),

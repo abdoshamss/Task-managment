@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../extensions/widget_extensions.dart';
 import '../theme/light_theme.dart';
-import '../../core/extensions/all_extensions.dart';
 import 'dimansion_manager.dart';
 
 class TextStylesManager {
@@ -91,9 +91,9 @@ class InputDecorations {
       hintText: hint,
       fillColor: fillColor,
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      hintStyle: TextStylesManager.gessRegular.s16.ellipsis.setColor(
-        LightThemeColors.textHint,
-      ),
+      // hintStyle: TextStylesManager.gessRegular.s16.ellipsis.setColor(
+      //   LightThemeColors.textHint,
+      // ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSize.inputBorderRadius),
         borderSide: BorderSide.none,
@@ -152,9 +152,9 @@ class InputDecorations {
         horizontal: AppSize.s16,
         vertical: AppSize.s16,
       ),
-      hintStyle: TextStylesManager.gessRegular.s16.ellipsis.setColor(
-        LightThemeColors.textHint,
-      ),
+      // hintStyle: TextStylesManager.gessRegular.s16.ellipsis.setColor(
+      //   LightThemeColors.textHint,
+      // ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSize.inputBorderRadius),
         borderSide: BorderSide(color: LightThemeColors.inputFieldBorder),
@@ -214,9 +214,9 @@ class InputDecorations {
         horizontal: AppSize.s16,
         vertical: AppSize.s16,
       ),
-      hintStyle: TextStylesManager.gessRegular.s16.ellipsis.setColor(
-        LightThemeColors.textHint,
-      ),
+      // hintStyle: TextStylesManager.gessRegular.s16.ellipsis.setColor(
+      //   LightThemeColors.textHint,
+      // ),
       border: UnderlineInputBorder(
         borderSide: BorderSide(color: LightThemeColors.inputFieldBorder),
       ),

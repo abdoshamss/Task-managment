@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/resources/font_manager.dart';
 import '../../core/theme/light_theme.dart';
-import '../../core/extensions/all_extensions.dart';
 
 class TextFormFieldWidget extends StatefulWidget {
   final String? hintText, label, errorText;
@@ -71,8 +71,8 @@ class TextFormFieldWidget extends StatefulWidget {
     this.maxLengh,
     this.errorText,
     this.controller,
-    this.activeBorderColor = LightThemeColors.primary,
-    this.borderRadius = 30.0,
+    this.activeBorderColor = Colors.blue,
+    this.borderRadius = 12.0,
     this.borderColor = Colors.black,
     this.backgroundColor,
     this.hintColor = LightThemeColors.textHint,
@@ -86,7 +86,7 @@ class TextFormFieldWidget extends StatefulWidget {
     this.textdirection,
     this.onImageSelected,
     this.onImageDeleted,
-     super.key,
+    super.key,
     this.inputFormatters,
     this.helperText,
     this.startdate,
@@ -140,8 +140,7 @@ class TextFormFieldWidget extends StatefulWidget {
        suffixWidget = null,
        type = TextInputType.text,
        onImageSelected = null,
-       onImageDeleted = null
-        ;
+       onImageDeleted = null;
   TextFormFieldWidget.filePicker({
     super.key,
     this.onTap,
@@ -305,7 +304,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
             }
           },
           onTapOutside: (event) => FocusScope.of(context).unfocus(),
-          cursorColor: context.colorScheme.primary,
+          cursorColor: Colors.black,
           readOnly:
               (widget.readOnly ?? false) ||
               widget.enableMapPicker ||
@@ -324,10 +323,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
           minLines: widget.minLines,
           textAlign: widget.textalign,
           textDirection: widget.textdirection,
-          style: context.bodySmall?.copyWith(
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-          ),
+          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
           decoration:
               widget.inputDecoration ??
               InputDecoration(
@@ -335,8 +331,10 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
                     widget.contentPadding ??
                     EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 filled: true,
-                fillColor: widget.backgroundColor ?? context.formFieldColor,
-                prefixIcon: widget.prefixIcon?.toSvg(),
+                fillColor: widget.backgroundColor ?? Color(0xffF6F6F6),
+                prefixIcon: widget.prefixIcon == null
+                    ? null
+                    : SvgPicture.asset(widget.prefixIcon ?? ""),
                 prefix: widget.prefixWidget,
                 suffix: widget.suffixWidget,
                 suffixIcon:
@@ -349,9 +347,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
                               passHidden
                                   ? Icons.remove_red_eye_outlined
                                   : Icons.visibility_off,
-                              color: context.colorScheme.primary.withOpacity(
-                                .5,
-                              ),
+                              color: LightThemeColors.primary.withOpacity(.5),
                             ),
                           )
                         : null),

@@ -9,7 +9,7 @@ class LightThemeColors {
   const LightThemeColors._();
 
   // Primary Colors
-  static const Color primary = Color(0xFF1E2025);
+  static const Color primary = Colors.blue;
   static const Color white = Color(0xFFFFFFFF);
 
   // Secondary Colors

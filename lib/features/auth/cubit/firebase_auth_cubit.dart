@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../models/user_model.dart';
+import '../../../core/data_source/hive_service.dart';
+import '../../../core/utils/general_constants.dart';
 
 part 'firebase_auth_states.dart';
 
@@ -14,10 +16,20 @@ class FirebaseAuthCubit extends Cubit<FirebaseAuthState> {
   static FirebaseAuthCubit get(context) => context.read<FirebaseAuthCubit>();
 
   void _listenAuthState() {
-    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+    FirebaseAuth.instance.authStateChanges().listen((User? user) async {
       if (user != null) {
-        emit(FirebaseAuthLoggedIn(UserModel.fromFirebaseUser(user)));
+        final userModel = UserModel.fromFirebaseUser(user);
+        await HiveService.putJson(
+          GeneralConstants.appBoxName,
+          GeneralConstants.userKey,
+          userModel.toJson(),
+        );
+        emit(FirebaseAuthLoggedIn(userModel));
       } else {
+        await HiveService.remove(
+          GeneralConstants.appBoxName,
+          GeneralConstants.userKey,
+        );
         emit(FirebaseAuthLoggedOut());
       }
     });

@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -48,32 +49,47 @@ class TasksTab extends StatelessWidget {
               child: Row(
                 spacing: 8,
                 children: [
-                  CustomFilterChip(
-                    label: l10n.all,
-                    value: 'all',
-                    selected: priorityFilter == 'all',
-                    onSelected: onFilterChanged,
+                  FadeInRight(
+                    duration: const Duration(milliseconds: 300),
+                    child: CustomFilterChip(
+                      label: l10n.all,
+                      value: 'all',
+                      selected: priorityFilter == 'all',
+                      onSelected: onFilterChanged,
+                    ),
                   ),
 
-                  CustomFilterChip(
-                    label: l10n.low,
-                    value: 'low',
-                    selected: priorityFilter == 'low',
-                    onSelected: onFilterChanged,
+                  FadeInRight(
+                    duration: const Duration(milliseconds: 300),
+                    delay: const Duration(milliseconds: 100),
+                    child: CustomFilterChip(
+                      label: l10n.low,
+                      value: 'low',
+                      selected: priorityFilter == 'low',
+                      onSelected: onFilterChanged,
+                    ),
                   ),
 
-                  CustomFilterChip(
-                    label: l10n.medium,
-                    value: 'medium',
-                    selected: priorityFilter == 'medium',
-                    onSelected: onFilterChanged,
+                  FadeInRight(
+                    duration: const Duration(milliseconds: 300),
+                    delay: const Duration(milliseconds: 200),
+                    child: CustomFilterChip(
+                      label: l10n.medium,
+                      value: 'medium',
+                      selected: priorityFilter == 'medium',
+                      onSelected: onFilterChanged,
+                    ),
                   ),
 
-                  CustomFilterChip(
-                    label: l10n.high,
-                    value: 'high',
-                    selected: priorityFilter == 'high',
-                    onSelected: onFilterChanged,
+                  FadeInRight(
+                    duration: const Duration(milliseconds: 300),
+                    delay: const Duration(milliseconds: 300),
+                    child: CustomFilterChip(
+                      label: l10n.high,
+                      value: 'high',
+                      selected: priorityFilter == 'high',
+                      onSelected: onFilterChanged,
+                    ),
                   ),
                 ],
               ),
@@ -86,21 +102,25 @@ class TasksTab extends StatelessWidget {
                       itemCount: filtered.length,
                       itemBuilder: (context, i) {
                         final task = filtered[i];
-                        return TaskCard(
-                          task: task,
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) => TaskDetailsScreen(task: task),
+                        return FadeInUp(
+                          duration: const Duration(milliseconds: 500),
+                          delay: Duration(milliseconds: 100 * (i > 5 ? 5 : i)),
+                          child: TaskCard(
+                            task: task,
+                            onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (_) => TaskDetailsScreen(task: task),
+                              ),
                             ),
-                          ),
-                          onEdit: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) => EditTaskScreen(task: task),
+                            onEdit: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (_) => EditTaskScreen(task: task),
+                              ),
                             ),
+                            onDelete: () => taskCubit.deleteTask(task.id),
+                            onToggleComplete: (v) =>
+                                taskCubit.toggleComplete(task.id, v),
                           ),
-                          onDelete: () => taskCubit.deleteTask(task.id),
-                          onToggleComplete: (v) =>
-                              taskCubit.toggleComplete(task.id, v),
                         );
                       },
                     ),

@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -5,9 +6,9 @@ import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
 import '../../../core/utils/validators.dart';
+import '../../tasks/screens/layout_screen.dart';
 import '../cubit/firebase_auth_cubit.dart';
 import 'register_screen.dart';
-import '../../tasks/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -61,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (!mounted) return;
     if (ok) {
       Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (_) => const TaskFlowHomeScreen()),
+        MaterialPageRoute(builder: (_) => const TaskFlowLayoutScreen()),
         (_) => false,
       );
     } else {
@@ -89,97 +90,106 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 48),
-                Text(
-                  l10n.login,
-                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
+                FadeInDown(
+                  duration: const Duration(milliseconds: 500),
+                  child: Text(
+                    l10n.login,
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 8),
-                Text(
-                  l10n.appName,
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.primary,
+                FadeInDown(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 200),
+                  child: Text(
+                    l10n.appName,
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 40),
-                TextFormFieldWidget(
-                  controller: _emailController,
-                  label: l10n.email,
-                  hintText: l10n.email,
-                  type: TextInputType.emailAddress,
-                  validator: (v) {
-                    final r = Validators.required(v);
-                    if (r != null) return l10n.requiredField;
-                    final e = Validators.email(v);
-                    if (e != null) return l10n.wrongEmailValidation;
-                    return null;
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 300),
+                  child: TextFormFieldWidget(
+                    controller: _emailController,
+                    label: l10n.email,
+                    hintText: l10n.email,
+                    type: TextInputType.emailAddress,
+                    validator: (v) {
+                      final r = Validators.required(v);
+                      if (r != null) return l10n.requiredField;
+                      final e = Validators.email(v);
+                      if (e != null) return l10n.wrongEmailValidation;
+                      return null;
+                    },
+                  ),
                 ),
                 const SizedBox(height: 16),
-                TextFormFieldWidget(
-                  controller: _passwordController,
-                  label: l10n.password,
-                  hintText: l10n.password,
-                  password: true,
-                  validator: (v) {
-                    final r = Validators.password(v);
-                    if (r == 'requiredPassword') return l10n.requiredPassword;
-                    if (r == 'smallPassword') return l10n.smallPassword;
-                    return null;
-                  },
-                ),
-                // const SizedBox(height: 12),
-                // Align(
-                //   alignment: Directionality.of(context) == TextDirection.ltr
-                //       ? Alignment.centerRight
-                //       : Alignment.centerLeft,
-                //   child: TextButton(
-                //     onPressed: () {
-                //       Navigator.of(context).push(
-                //         MaterialPageRoute(
-                //           builder: (_) => const ForgotPasswordScreen(),
-                //         ),
-                //       );
-                //     },
-                //     child: Text(l10n.forgotPassword),
-                //   ),
-                // ),
-                const SizedBox(height: 24),
-                BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
-                  buildWhen: (p, c) =>
-                      c is FirebaseAuthLoading || p is FirebaseAuthLoading,
-                  builder: (context, state) {
-                    final loading = state is FirebaseAuthLoading;
-                    return ButtonWidget(
-                      title: l10n.login,
-                      onTap: loading ? null : _login,
-                      child: loading
-                          ? const SizedBox(
-                              height: 24,
-                              width: 24,
-                              child: CircularProgressIndicator(strokeWidth: 2),
-                            )
-                          : null,
-                    );
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 400),
+                  child: TextFormFieldWidget(
+                    controller: _passwordController,
+                    label: l10n.password,
+                    hintText: l10n.password,
+                    password: true,
+                    validator: (v) {
+                      final r = Validators.password(v);
+                      if (r == 'requiredPassword') return l10n.requiredPassword;
+                      if (r == 'smallPassword') return l10n.smallPassword;
+                      return null;
+                    },
+                  ),
                 ),
                 const SizedBox(height: 24),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(l10n.dontHaveAccount),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => const RegisterScreen(),
-                          ),
-                        );
-                      },
-                      child: Text(l10n.register),
-                    ),
-                  ],
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 500),
+                  child: BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
+                    buildWhen: (p, c) =>
+                        c is FirebaseAuthLoading || p is FirebaseAuthLoading,
+                    builder: (context, state) {
+                      final loading = state is FirebaseAuthLoading;
+                      return ButtonWidget(
+                        title: l10n.login,
+                        onTap: loading ? null : _login,
+                        child: loading
+                            ? const SizedBox(
+                                height: 24,
+                                width: 24,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
+                              )
+                            : null,
+                      );
+                    },
+                  ),
+                ),
+                const SizedBox(height: 24),
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 600),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(l10n.dontHaveAccount),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => const RegisterScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(l10n.register),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

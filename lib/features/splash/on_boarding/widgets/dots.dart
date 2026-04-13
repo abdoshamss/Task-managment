@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../core/extensions/all_extensions.dart';
-
 import '../../cubit/splash_cubit.dart';
 import '../../cubit/splash_states.dart';
 
@@ -28,7 +26,7 @@ class _DotsWidgetState extends State<DotsWidget> {
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(40)),
             color: cubit.sliderIndex == widget.index
-                ? context.secondaryColor
+                ? Colors.blue
                 : Color(0xffE6E6E6),
           ),
           margin: const EdgeInsets.only(right: 5),

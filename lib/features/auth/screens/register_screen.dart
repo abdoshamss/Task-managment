@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -94,86 +95,111 @@ class _RegisterScreenState extends State<RegisterScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 24),
-                TextFormFieldWidget(
-                  controller: _nameController,
-                  label: l10n.fullName,
-                  hintText: l10n.fullName,
-                  validator: (v) => Validators.required(v) != null
-                      ? l10n.requiredField
-                      : null,
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  child: TextFormFieldWidget(
+                    controller: _nameController,
+                    label: l10n.fullName,
+                    hintText: l10n.fullName,
+                    validator: (v) => Validators.required(v) != null
+                        ? l10n.requiredField
+                        : null,
+                  ),
                 ),
                 const SizedBox(height: 16),
-                TextFormFieldWidget(
-                  controller: _emailController,
-                  label: l10n.email,
-                  hintText: l10n.email,
-                  type: TextInputType.emailAddress,
-                  validator: (v) {
-                    final r = Validators.required(v);
-                    if (r != null) return l10n.requiredEmail;
-                    final e = Validators.email(v);
-                    if (e != null) return l10n.wrongEmailValidation;
-                    return null;
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 100),
+                  child: TextFormFieldWidget(
+                    controller: _emailController,
+                    label: l10n.email,
+                    hintText: l10n.email,
+                    type: TextInputType.emailAddress,
+                    validator: (v) {
+                      final r = Validators.required(v);
+                      if (r != null) return l10n.requiredEmail;
+                      final e = Validators.email(v);
+                      if (e != null) return l10n.wrongEmailValidation;
+                      return null;
+                    },
+                  ),
                 ),
                 const SizedBox(height: 16),
-                TextFormFieldWidget(
-                  controller: _passwordController,
-                  label: l10n.password,
-                  hintText: l10n.password,
-                  password: true,
-                  validator: (v) {
-                    final r = Validators.password(v);
-                    if (r == 'requiredPassword') return l10n.requiredPassword;
-                    if (r == 'smallPassword') return l10n.smallPassword;
-                    return null;
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 200),
+                  child: TextFormFieldWidget(
+                    controller: _passwordController,
+                    label: l10n.password,
+                    hintText: l10n.password,
+                    password: true,
+                    validator: (v) {
+                      final r = Validators.password(v);
+                      if (r == 'requiredPassword') return l10n.requiredPassword;
+                      if (r == 'smallPassword') return l10n.smallPassword;
+                      return null;
+                    },
+                  ),
                 ),
                 const SizedBox(height: 16),
-                TextFormFieldWidget(
-                  controller: _confirmPasswordController,
-                  label: l10n.confirmPasswordLabel,
-                  hintText: l10n.confirmPasswordLabel,
-                  password: true,
-                  validator: (v) {
-                    final r = Validators.confirmPassword(
-                      v,
-                      _passwordController.text,
-                    );
-                    if (r == 'requiredPassword') return l10n.requiredPassword;
-                    if (r == 'passwordNotMatch') return l10n.passwordNotMatch;
-                    return null;
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 300),
+                  child: TextFormFieldWidget(
+                    controller: _confirmPasswordController,
+                    label: l10n.confirmPasswordLabel,
+                    hintText: l10n.confirmPasswordLabel,
+                    password: true,
+                    validator: (v) {
+                      final r = Validators.confirmPassword(
+                        v,
+                        _passwordController.text,
+                      );
+                      if (r == 'requiredPassword') return l10n.requiredPassword;
+                      if (r == 'passwordNotMatch') return l10n.passwordNotMatch;
+                      return null;
+                    },
+                  ),
                 ),
                 const SizedBox(height: 32),
-                BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
-                  buildWhen: (p, c) =>
-                      c is FirebaseAuthLoading || p is FirebaseAuthLoading,
-                  builder: (context, state) {
-                    final loading = state is FirebaseAuthLoading;
-                    return ButtonWidget(
-                      title: l10n.register,
-                      onTap: loading ? null : _register,
-                      child: loading
-                          ? const SizedBox(
-                              height: 24,
-                              width: 24,
-                              child: CircularProgressIndicator(strokeWidth: 2),
-                            )
-                          : null,
-                    );
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 400),
+                  child: BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
+                    buildWhen: (p, c) =>
+                        c is FirebaseAuthLoading || p is FirebaseAuthLoading,
+                    builder: (context, state) {
+                      final loading = state is FirebaseAuthLoading;
+                      return ButtonWidget(
+                        title: l10n.register,
+                        onTap: loading ? null : _register,
+                        child: loading
+                            ? const SizedBox(
+                                height: 24,
+                                width: 24,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
+                              )
+                            : null,
+                      );
+                    },
+                  ),
                 ),
                 const SizedBox(height: 24),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(l10n.alreadyHaveAccount),
-                    TextButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      child: Text(l10n.login),
-                    ),
-                  ],
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 500),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(l10n.alreadyHaveAccount),
+                      TextButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        child: Text(l10n.login),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

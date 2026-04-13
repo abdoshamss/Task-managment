@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_mangment/core/theme/light_theme.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../models/task_model.dart';
@@ -33,11 +34,14 @@ class TaskCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: LightThemeColors.primary.withOpacity(.1),
       margin: const EdgeInsets.only(bottom: 8),
       child: ListTile(
-        leading: Checkbox(
+        leading: Switch(
+          activeThumbColor: LightThemeColors.primary,
           value: task.isCompleted,
-          onChanged: (v) => onToggleComplete(v ?? false),
+          inactiveTrackColor: LightThemeColors.primary.withOpacity(.2),
+          onChanged: (v) => onToggleComplete(v),
         ),
         title: Text(
           task.title,

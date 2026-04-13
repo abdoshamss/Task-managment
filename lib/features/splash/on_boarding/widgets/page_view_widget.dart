@@ -32,7 +32,13 @@ class PageViewWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: FadeInLeft(child: DefaultImageWidget(item.imageUrl)),
+                    child: FadeInLeft(
+                      child: DefaultImageWidget(
+                        item.imageUrl,
+                        width: 400,
+                        radius: 100,
+                      ),
+                    ),
                   ),
 
                   const Spacer(),
@@ -41,20 +47,27 @@ class PageViewWidget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CustomText(
-                          item.title,
-                          align: TextAlign.start,
-                          fontSize: 36,
-                          color: LightThemeColors.primary,
-                          weight: FontWeight.bold,
+                        FadeInUp(
+                          duration: const Duration(milliseconds: 600),
+                          child: CustomText(
+                            item.title,
+                            align: TextAlign.start,
+                            fontSize: 36,
+                            color: LightThemeColors.primary,
+                            weight: FontWeight.bold,
+                          ),
                         ),
-                        SizedBox(height: 16),
-                        CustomText(
-                          item.subTitle,
-                          fontSize: 20,
-                          align: TextAlign.start,
-                          color: const Color(0xff7C7C7C),
-                          weight: FontWeight.w400,
+                        const SizedBox(height: 16),
+                        FadeInUp(
+                          duration: const Duration(milliseconds: 600),
+                          delay: const Duration(milliseconds: 200),
+                          child: CustomText(
+                            item.subTitle,
+                            fontSize: 20,
+                            align: TextAlign.start,
+                            color: const Color(0xff7C7C7C),
+                            weight: FontWeight.w400,
+                          ),
                         ),
                       ],
                     ),

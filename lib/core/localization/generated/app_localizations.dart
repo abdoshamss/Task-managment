@@ -583,6 +583,42 @@ abstract class AppLocalizations {
   /// In ar, this message translates to:
   /// **'اسم العرض'**
   String get displayName;
+
+  /// No description provided for @onboardingTitle1.
+  ///
+  /// In ar, this message translates to:
+  /// **'نظم مهامك بسهولة'**
+  String get onboardingTitle1;
+
+  /// No description provided for @onboardingSubtitle1.
+  ///
+  /// In ar, this message translates to:
+  /// **'تطبيق تاسك فلو يساعدك على ترتيب أولوياتك وإنجاز مهامك اليومية بكفاءة عالية.'**
+  String get onboardingSubtitle1;
+
+  /// No description provided for @onboardingTitle2.
+  ///
+  /// In ar, this message translates to:
+  /// **'تابع تقدمك'**
+  String get onboardingTitle2;
+
+  /// No description provided for @onboardingSubtitle2.
+  ///
+  /// In ar, this message translates to:
+  /// **'راقب مستوى إنجازك من خلال إحصائيات دقيقة لكل المهام المكتملة والمعلقة.'**
+  String get onboardingSubtitle2;
+
+  /// No description provided for @onboardingTitle3.
+  ///
+  /// In ar, this message translates to:
+  /// **'لا تفوت أي موعد'**
+  String get onboardingTitle3;
+
+  /// No description provided for @onboardingSubtitle3.
+  ///
+  /// In ar, this message translates to:
+  /// **'مع ميزة تاريخ الاستحقاق والتنبيهات، ستكون دائماً على علم بمواعيدك القادمة.'**
+  String get onboardingSubtitle3;
 }
 
 class _AppLocalizationsDelegate

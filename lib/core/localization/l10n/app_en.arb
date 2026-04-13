@@ -80,5 +80,11 @@
   "resetLinkSent": "Password reset link sent! Check your email.",
   "editProfile": "Edit Profile",
   "profileUpdated": "Profile updated successfully",
-  "displayName": "Display Name"
+  "displayName": "Display Name",
+  "onboardingTitle1": "Organize Your Tasks",
+  "onboardingSubtitle1": "Task Flow helps you prioritize and complete your daily tasks with high efficiency.",
+  "onboardingTitle2": "Track Your Progress",
+  "onboardingSubtitle2": "Monitor your achievement level through accurate statistics for all completed and pending tasks.",
+  "onboardingTitle3": "Never Miss a Deadline",
+  "onboardingSubtitle3": "Stay on top of your schedule with due dates and timely notifications."
 }

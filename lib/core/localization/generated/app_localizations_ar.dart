@@ -254,4 +254,25 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get displayName => 'اسم العرض';
+
+  @override
+  String get onboardingTitle1 => 'نظم مهامك بسهولة';
+
+  @override
+  String get onboardingSubtitle1 =>
+      'تطبيق تاسك فلو يساعدك على ترتيب أولوياتك وإنجاز مهامك اليومية بكفاءة عالية.';
+
+  @override
+  String get onboardingTitle2 => 'تابع تقدمك';
+
+  @override
+  String get onboardingSubtitle2 =>
+      'راقب مستوى إنجازك من خلال إحصائيات دقيقة لكل المهام المكتملة والمعلقة.';
+
+  @override
+  String get onboardingTitle3 => 'لا تفوت أي موعد';
+
+  @override
+  String get onboardingSubtitle3 =>
+      'مع ميزة تاريخ الاستحقاق والتنبيهات، ستكون دائماً على علم بمواعيدك القادمة.';
 }

@@ -1,9 +1,11 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
+import '../../../core/theme/light_theme.dart';
 import '../../auth/cubit/firebase_auth_cubit.dart';
 
 class EditProfileScreen extends StatefulWidget {
@@ -88,63 +90,80 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 24),
-                Center(
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Theme.of(
-                      context,
-                    ).colorScheme.primaryContainer,
-                    child: Text(
-                      (user?.displayName?.isNotEmpty == true
-                              ? user!.displayName!.substring(0, 1)
-                              : user?.email.substring(0, 1) ?? '?')
-                          .toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 36,
-                        color: Theme.of(context).colorScheme.primary,
+                FadeInDown(
+                  duration: const Duration(milliseconds: 600),
+                  child: Center(
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundColor: LightThemeColors.primary.withValues(
+                        alpha: 0.2,
+                      ),
+                      child: Text(
+                        (user?.displayName?.isNotEmpty == true
+                                ? user!.displayName!.substring(0, 1)
+                                : user?.email.substring(0, 1) ?? '?')
+                            .toUpperCase(),
+                        style: TextStyle(
+                          fontSize: 36,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
                       ),
                     ),
                   ),
                 ),
                 const SizedBox(height: 24),
-                TextFormFieldWidget(
-                  controller: _nameController,
-                  label: l10n.displayName,
-                  hintText: l10n.displayName,
-                  type: TextInputType.name,
-                  validator: (v) {
-                    if (v == null || v.trim().isEmpty) {
-                      return l10n.requiredField;
-                    }
-                    return null;
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 100),
+                  child: TextFormFieldWidget(
+                    controller: _nameController,
+                    label: l10n.displayName,
+                    hintText: l10n.displayName,
+                    type: TextInputType.name,
+                    validator: (v) {
+                      if (v == null || v.trim().isEmpty) {
+                        return l10n.requiredField;
+                      }
+                      return null;
+                    },
+                  ),
                 ),
                 const SizedBox(height: 16),
-                TextFormFieldWidget(
-                  controller: TextEditingController(text: user?.email ?? ''),
-                  label: l10n.email,
-                  hintText: l10n.email,
-                  type: TextInputType.emailAddress,
-                  enable: false,
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 200),
+                  child: TextFormFieldWidget(
+                    controller: TextEditingController(text: user?.email ?? ''),
+                    label: l10n.email,
+                    hintText: l10n.email,
+                    type: TextInputType.emailAddress,
+                    enable: false,
+                  ),
                 ),
                 const SizedBox(height: 32),
-                BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
-                  buildWhen: (p, c) =>
-                      c is ProfileUpdateLoading || p is ProfileUpdateLoading,
-                  builder: (context, state) {
-                    final loading = state is ProfileUpdateLoading;
-                    return ButtonWidget(
-                      title: l10n.save,
-                      onTap: loading ? null : _save,
-                      child: loading
-                          ? const SizedBox(
-                              height: 24,
-                              width: 24,
-                              child: CircularProgressIndicator(strokeWidth: 2),
-                            )
-                          : null,
-                    );
-                  },
+                FadeInUp(
+                  duration: const Duration(milliseconds: 500),
+                  delay: const Duration(milliseconds: 300),
+                  child: BlocBuilder<FirebaseAuthCubit, FirebaseAuthState>(
+                    buildWhen: (p, c) =>
+                        c is ProfileUpdateLoading || p is ProfileUpdateLoading,
+                    builder: (context, state) {
+                      final loading = state is ProfileUpdateLoading;
+                      return ButtonWidget(
+                        title: l10n.save,
+                        onTap: loading ? null : _save,
+                        child: loading
+                            ? const SizedBox(
+                                height: 24,
+                                width: 24,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                ),
+                              )
+                            : null,
+                      );
+                    },
+                  ),
                 ),
               ],
             ),

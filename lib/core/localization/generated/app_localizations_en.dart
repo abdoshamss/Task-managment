@@ -253,4 +253,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get displayName => 'Display Name';
+
+  @override
+  String get onboardingTitle1 => 'Organize Your Tasks';
+
+  @override
+  String get onboardingSubtitle1 =>
+      'Task Flow helps you prioritize and complete your daily tasks with high efficiency.';
+
+  @override
+  String get onboardingTitle2 => 'Track Your Progress';
+
+  @override
+  String get onboardingSubtitle2 =>
+      'Monitor your achievement level through accurate statistics for all completed and pending tasks.';
+
+  @override
+  String get onboardingTitle3 => 'Never Miss a Deadline';
+
+  @override
+  String get onboardingSubtitle3 =>
+      'Stay on top of your schedule with due dates and timely notifications.';
 }

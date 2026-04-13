@@ -60,6 +60,7 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
         width: double.infinity,
         height: double.infinity,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/extensions/all_extensions.dart';
+import '../core/theme/light_theme.dart';
 
 class BackWidget extends StatelessWidget {
   const BackWidget({super.key, this.onBack, this.color, this.icon, this.size});
@@ -19,7 +19,7 @@ class BackWidget extends StatelessWidget {
       },
       icon: Icon(
         icon ?? Icons.arrow_back_ios,
-        color: color ?? context.colorScheme.primary,
+        color: color ?? LightThemeColors.primary,
         size: size,
       ),
     );
