@@ -581,7 +581,7 @@ abstract class AppLocalizations {
   /// No description provided for @displayName.
   ///
   /// In ar, this message translates to:
-  /// **'اسم العرض'**
+  /// **'الإسم'**
   String get displayName;
 
   /// No description provided for @onboardingTitle1.

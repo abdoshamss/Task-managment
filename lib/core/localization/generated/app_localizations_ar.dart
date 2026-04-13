@@ -253,7 +253,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get profileUpdated => 'تم تحديث الملف الشخصي بنجاح';
 
   @override
-  String get displayName => 'اسم العرض';
+  String get displayName => 'الإسم';
 
   @override
   String get onboardingTitle1 => 'نظم مهامك بسهولة';

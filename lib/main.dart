@@ -7,13 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:task_mangment/core/theme/light_theme.dart';
 import 'core/data_source/hive_service.dart';
 import 'core/general/general_cubit.dart';
 import 'core/localization/generated/app_localizations.dart';
 import 'core/localization/localization_helper.dart';
 import 'core/style/app_theme.dart';
 import 'core/utils/general_constants.dart';
-import 'core/utils/utils.dart';
+ import 'core/utils/utils.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'features/auth/cubit/firebase_auth_cubit.dart';
@@ -70,10 +71,7 @@ class MyApp extends StatelessWidget {
               themeAnimationDuration: const Duration(milliseconds: 700),
               themeAnimationCurve: Curves.easeInOutCubic,
               debugShowCheckedModeBanner: false,
-              localizationsDelegates: [
-                ...AppLocalizations.localizationsDelegates,
-                LocalizationHelper.delegate,
-              ],
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
               locale: LocalizationHelper.currentLocale,
               localeResolutionCallback: (locale, supportedLocales) {
                 for (var supportedLocale in supportedLocales) {
@@ -87,11 +85,11 @@ class MyApp extends StatelessWidget {
               navigatorKey: navigatorKeyy,
 
               supportedLocales: AppLocalizations.supportedLocales,
-              builder: (_, child) {
+              builder: (ctx, child) {
                 final botToastBuilder = BotToastInit();
                 final smartDialog = FlutterSmartDialog.init();
-                child = smartDialog(context, child);
-                child = botToastBuilder(context, child);
+                child = smartDialog(ctx, child);
+                child = botToastBuilder(ctx, child);
                 SystemChrome.setSystemUIOverlayStyle(
                   AppThemes().theme.name == 'light'
                       ? SystemUiOverlayStyle.dark
@@ -99,14 +97,8 @@ class MyApp extends StatelessWidget {
                 );
                 return child;
               },
-              // onGenerateRoute: RouteGenerator.getRoute,
-              // themeMode: cubit.isLightMode ? ThemeMode.light : ThemeMode.dark,
-              // theme: cubit.isLightMode ? LightTheme.getTheme() : DarkTheme.getTheme(),
-              // themeMode: ThemeMode.system,
-              // theme: LightTheme.getTheme(),
-              // darkTheme: DarkTheme.getTheme(),
-              theme: AppThemes().theme.appTheme,
-              home: const SplashScreen(),
+
+               home: const SplashScreen(),
             );
           },
         ),

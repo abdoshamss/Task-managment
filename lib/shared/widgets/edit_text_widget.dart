@@ -331,7 +331,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
                     widget.contentPadding ??
                     EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 filled: true,
-                fillColor: widget.backgroundColor ?? Color(0xffF6F6F6),
+                fillColor: widget.backgroundColor  ??Colors.white,
                 prefixIcon: widget.prefixIcon == null
                     ? null
                     : SvgPicture.asset(widget.prefixIcon ?? ""),

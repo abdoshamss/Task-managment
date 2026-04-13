@@ -105,7 +105,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                             .toUpperCase(),
                         style: TextStyle(
                           fontSize: 36,
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Colors.blue,
+
                         ),
                       ),
                     ),
@@ -119,6 +120,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     controller: _nameController,
                     label: l10n.displayName,
                     hintText: l10n.displayName,
+
                     type: TextInputType.name,
                     validator: (v) {
                       if (v == null || v.trim().isEmpty) {

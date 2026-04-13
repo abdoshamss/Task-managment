@@ -1,5 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:restart_app/restart_app.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/general/general_cubit.dart';
 import '../../../../core/localization/localization_helper.dart';
@@ -20,32 +22,40 @@ class LanguageScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: ListView(
-        children: [
-          RadioListTile<String>(
-            title: Text(l10n.arabic),
-            value: 'العربية',
-            groupValue: currentLang,
-            onChanged: (value) {
-              if (value != null) {
-                LocalizationHelper.setLocale(value);
-                context.read<GeneralCubit>().changeLocale(value);
-              }
-            },
-          ),
-          const Divider(),
-          RadioListTile<String>(
-            title: Text(l10n.english),
-            value: 'English',
-            groupValue: currentLang,
-            onChanged: (value) {
-              if (value != null) {
-                LocalizationHelper.setLocale(value);
-                context.read<GeneralCubit>().changeLocale(value);
-              }
-            },
-          ),
-        ],
+      body: FadeInUp(
+        duration: const Duration(milliseconds: 500),
+        child: ListView(
+          children: [
+            RadioListTile<String>(
+              activeColor: Theme.of(context).colorScheme.primary,
+              title: Text(l10n.arabic),
+              value: 'العربية',
+              groupValue: currentLang,
+              onChanged: (value) async {
+                if (value != null && value != currentLang) {
+                  await LocalizationHelper.setLocale(value);
+
+                    Restart.restartApp();
+
+                }
+              },
+            ),
+            const Divider(),
+            RadioListTile<String>(
+              activeColor: Theme.of(context).colorScheme.primary,
+              title: Text(l10n.english),
+              value: 'English',
+              groupValue: currentLang,
+              onChanged: (value) async {
+                if (value != null && value != currentLang) {
+                  await LocalizationHelper.setLocale(value);
+                     Restart.restartApp();
+
+                }
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
