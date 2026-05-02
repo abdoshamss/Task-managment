@@ -153,11 +153,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     buildWhen: (p, c) =>
                         c is FirebaseAuthLoading || p is FirebaseAuthLoading,
                     builder: (context, state) {
-                      final loading = state is FirebaseAuthLoading;
+                   
                       return ButtonWidget(
                         title: l10n.login,
-                        onTap: loading ? null : _login,
-                        child: loading
+                        onTap: state is FirebaseAuthLoading ? null : _login,
+                        child: state is FirebaseAuthLoading
                             ? const SizedBox(
                                 height: 24,
                                 width: 24,

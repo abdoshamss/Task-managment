@@ -18,8 +18,7 @@ class OnboardingScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) =>
           SplashCubit()..controller = PageController(initialPage: 0),
-      child: BlocConsumer<SplashCubit, SplashStates>(
-        listener: (context, state) {},
+      child: BlocBuilder<SplashCubit, SplashStates>(
         builder: (context, state) {
           SplashCubit cubit = SplashCubit.get(context);
           return Scaffold(
@@ -28,7 +27,7 @@ class OnboardingScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 64),
+                  SizedBox(height: 32),
                   const PageViewWidget(),
                   FadeInUp(
                     duration: const Duration(milliseconds: 600),

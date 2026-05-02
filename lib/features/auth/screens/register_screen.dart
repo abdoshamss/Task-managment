@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:task_mangment/features/tasks/screens/layout_screen.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
@@ -65,7 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!mounted) return;
     if (ok) {
       Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (_) => const TaskFlowHomeScreen()),
+        MaterialPageRoute(builder: (_) => const TaskFlowLayoutScreen()),
         (_) => false,
       );
     } else {

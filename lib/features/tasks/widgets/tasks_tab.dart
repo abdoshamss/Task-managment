@@ -112,13 +112,7 @@ class TasksTab extends StatelessWidget {
                                 builder: (_) => TaskDetailsScreen(task: task),
                               ),
                             ),
-                            onEdit: () => Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (_) => EditTaskScreen(task: task),
-                              ),
-                            ),
-                            onDelete: () => taskCubit.deleteTask(task.id),
-                            onToggleComplete: (v) =>
+                             onToggleComplete: (v) =>
                                 taskCubit.toggleComplete(task.id, v),
                           ),
                         );

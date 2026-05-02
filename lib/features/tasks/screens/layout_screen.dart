@@ -42,7 +42,7 @@ class _TaskFlowLayoutScreenState extends State<TaskFlowLayoutScreen> {
         actions: [
           if (_currentIndex == 0 && user != null)
             Padding(
-              padding: const EdgeInsets.only(right: 8),
+              padding: const EdgeInsets.only(right: 8, left: 8),
               child: CircleAvatar(
                 backgroundColor: LightThemeColors.primary.withOpacity(.24),
                 child: Text(

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/theme/light_theme.dart';
-import '../../../../shared/widgets/default_image_widget.dart';
 import '../../cubit/splash_cubit.dart';
 import '../../cubit/splash_states.dart';
 
@@ -31,11 +30,7 @@ class PageViewWidget extends StatelessWidget {
                 children: [
                   Center(
                     child: FadeInLeft(
-                      child: DefaultImageWidget(
-                        item.imageUrl,
-                        width: 400,
-                        radius: 100,
-                      ),
+                      child: Image.asset(item.imageUrl, width: 400),
                     ),
                   ),
 
@@ -47,24 +42,29 @@ class PageViewWidget extends StatelessWidget {
                       children: [
                         FadeInUp(
                           duration: const Duration(milliseconds: 600),
-                          child: CustomText(
+                          child: Text(
                             item.title,
-                            align: TextAlign.start,
-                            fontSize: 36,
-                            color: LightThemeColors.primary,
-                            weight: FontWeight.bold,
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 36,
+                              color: LightThemeColors.primary,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                         const SizedBox(height: 16),
                         FadeInUp(
                           duration: const Duration(milliseconds: 600),
                           delay: const Duration(milliseconds: 200),
-                          child: CustomText(
+                          child: Text(
+                            textAlign: TextAlign.start,
+
                             item.subTitle,
-                            fontSize: 20,
-                            align: TextAlign.start,
-                            color: const Color(0xff7C7C7C),
-                            weight: FontWeight.w400,
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: const Color(0xff7C7C7C),
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
                       ],

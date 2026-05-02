@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/data_source/hive_service.dart';
 import '../../../../../core/utils/general_constants.dart';
-import '../../../../../shared/widgets/default_image_widget.dart';
 import '../../../../tasks/screens/layout_screen.dart';
 import '../../../cubit/splash_cubit.dart';
 import '../../../cubit/splash_states.dart';
@@ -18,12 +17,11 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen>
-    with WidgetsBindingObserver {
+  {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
-    _navigateToNext();
+     _navigateToNext();
   }
 
   void _navigateToNext() {
@@ -50,13 +48,7 @@ class _SplashScreenState extends State<SplashScreen>
       }
     });
   }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
+ 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -69,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen>
             return Center(
               child: ZoomIn(
                 duration: const Duration(milliseconds: 2000),
-                child: const DefaultImageWidget(
+                child: Image.asset(
                   "assets/images/img1.png",
                   width: double.infinity,
                 ),

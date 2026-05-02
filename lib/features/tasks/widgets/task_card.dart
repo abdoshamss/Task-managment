@@ -9,16 +9,13 @@ class TaskCard extends StatelessWidget {
     super.key,
     required this.task,
     required this.onTap,
-    required this.onEdit,
-    required this.onDelete,
-    required this.onToggleComplete,
+ 
+     required this.onToggleComplete,
   });
 
   final TaskModel task;
   final VoidCallback onTap;
-  final VoidCallback onEdit;
-  final VoidCallback onDelete;
-  final ValueChanged<bool> onToggleComplete;
+   final ValueChanged<bool> onToggleComplete;
 
   Color _priorityColor() {
     switch (task.priority) {

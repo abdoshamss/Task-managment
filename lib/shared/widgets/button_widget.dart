@@ -73,35 +73,4 @@ class ButtonWidget extends StatelessWidget {
   }
 }
 
-class TextButtonWidget extends StatelessWidget {
-  const TextButtonWidget({
-    super.key,
-    required this.function,
-    required this.text,
-    this.fontweight,
-    this.color,
-    this.size,
-  });
-  final Function function;
-  final String text;
-  final double? size;
-  final Color? color;
-  final FontWeight? fontweight;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        function();
-      },
-      child: Text(
-        text,
-        style: TextStyle(
-          fontWeight: fontweight ?? FontWeight.w500,
-          fontSize: size ?? 16,
-          color: color ?? Colors.blue,
-        ),
-      ),
-    );
-  }
-}
+ 

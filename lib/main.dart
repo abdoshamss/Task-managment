@@ -12,7 +12,6 @@ import 'firebase_options.dart';
 import 'features/auth/cubit/firebase_auth_cubit.dart';
 import 'features/tasks/cubit/task_cubit.dart';
 import 'features/splash/presentation/screens/splash/splash.dart';
-
 GlobalKey<NavigatorState>? navigatorKeyy = GlobalKey<NavigatorState>();
 //abdoshams2005@gmail.com
 Future<void> main() async {
@@ -26,48 +25,40 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
-  @override
+   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider(create: (_) => FirebaseAuthCubit()),
-          BlocProvider(create: (_) => TaskCubit()),
-          BlocProvider(create: (_) => GeneralCubit()),
-        ],
-        child: BlocConsumer<GeneralCubit, GeneralState>(
-          listener: (context, state) {
-            // TODO: implement listener
-          },
-          // listenWhen: (previous, current)=>cubit. ,
-          builder: (context, state) {
-            final cubit = GeneralCubit.get(context);
-            return MaterialApp(
-              title: 'Task Flow',
-              navigatorKey: navigatorKeyy,
-              themeAnimationDuration: const Duration(milliseconds: 700),
-              themeAnimationCurve: Curves.easeInOutCubic,
-              debugShowCheckedModeBanner: false,
-              localizationsDelegates: AppLocalizations.localizationsDelegates,
-              locale: LocalizationHelper.currentLocale,
-              localeResolutionCallback: (locale, supportedLocales) {
-                for (var supportedLocale in supportedLocales) {
-                  if (supportedLocale.languageCode == locale?.languageCode &&
-                      supportedLocale.countryCode == locale?.countryCode) {
-                    return supportedLocale;
-                  }
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => FirebaseAuthCubit()),
+        BlocProvider(create: (_) => TaskCubit()),
+        BlocProvider(create: (_) => GeneralCubit()),
+      ],
+      child: BlocConsumer<GeneralCubit, GeneralState>(
+        listener: (context, state) {
+         },
+         builder: (context, state) {
+           return MaterialApp(
+            title: 'Task Flow',
+            navigatorKey: navigatorKeyy,
+           
+            debugShowCheckedModeBanner: false,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            locale: LocalizationHelper.currentLocale,
+            localeResolutionCallback: (locale, supportedLocales) {
+              for (var supportedLocale in supportedLocales) {
+                if (supportedLocale.languageCode == locale?.languageCode &&
+                    supportedLocale.countryCode == locale?.countryCode) {
+                  return supportedLocale;
                 }
-                return supportedLocales.first;
-              },
-
-              supportedLocales: AppLocalizations.supportedLocales,
-
-              home: const SplashScreen(),
-            );
-          },
-        ),
+              }
+              return supportedLocales.first;
+            },
+    
+            supportedLocales: AppLocalizations.supportedLocales,
+    
+            home: const SplashScreen(),
+          );
+        },
       ),
     );
   }

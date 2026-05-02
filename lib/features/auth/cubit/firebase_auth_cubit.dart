@@ -94,17 +94,7 @@ class FirebaseAuthCubit extends Cubit<FirebaseAuthState> {
     emit(FirebaseAuthLoggedOut());
   }
 
-  Future<bool> forgotPassword(String email) async {
-    emit(ForgotPasswordLoading());
-    try {
-      await FirebaseAuth.instance.sendPasswordResetEmail(email: email.trim());
-      emit(ForgotPasswordSuccess());
-      return true;
-    } catch (e) {
-      emit(ForgotPasswordError(_mapAuthError(e)));
-      return false;
-    }
-  }
+  
 
   Future<bool> updateProfile({String? displayName}) async {
     emit(ProfileUpdateLoading());
