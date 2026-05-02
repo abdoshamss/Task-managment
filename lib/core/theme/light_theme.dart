@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../resources/text_style_manager.dart';
 import '../utils/utils.dart';
-import 'theme_manager.dart';
 
 class LightThemeColors {
   const LightThemeColors._();
@@ -175,17 +173,7 @@ class LightTheme {
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: true,
-        titleTextStyle: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: LightThemeColors.textPrimary,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: LightThemeColors.textPrimary,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              ),
+
         iconTheme: const IconThemeData(color: LightThemeColors.textPrimary),
         actionsIconTheme: const IconThemeData(
           color: LightThemeColors.textPrimary,
@@ -193,173 +181,6 @@ class LightTheme {
       ),
 
       // //* Text Theme
-      textTheme: TextTheme(
-        // Display
-        displayLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              ),
-
-        // Header
-        headlineLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              ),
-
-        // Title
-        titleLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              ),
-        titleMedium: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: LightThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessMedium.copyWith(
-                color: LightThemeColors.textPrimary,
-              ),
-        titleSmall: Utils.lang == "en"
-            ? TextStylesManager.aristaRegular.copyWith(
-                color: LightThemeColors.textHint,
-              )
-            : TextStylesManager.gessRegular.copyWith(
-                color: LightThemeColors.textHint,
-              ),
-
-        // Body Text
-        bodyLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: LightThemeColors.textPrimary,
-              ),
-        bodyMedium: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: LightThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessMedium.copyWith(
-                color: LightThemeColors.textPrimary,
-              ),
-        bodySmall: Utils.lang == "en"
-            ? TextStylesManager.aristaRegular.copyWith(
-                color: LightThemeColors.textHint,
-              )
-            : TextStylesManager.gessRegular.copyWith(
-                color: LightThemeColors.textHint,
-              ),
-
-        // label
-        labelLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: LightThemeColors.success,
-              )
-            : TextStylesManager.gessMedium.copyWith(
-                color: LightThemeColors.success,
-              ),
-        labelMedium: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: LightThemeColors.error,
-              )
-            : TextStylesManager.gessMedium.copyWith(
-                color: LightThemeColors.error,
-              ),
-      ),
-
-      // //*  bottomNavigationBarTheme        //*  bottomNavigationBarTheme
-      // bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      //   elevation: 0,
-      //   type: BottomNavigationBarType.fixed,
-      //   selectedLabelStyle: TextStylesManager.cairo.regular.s10
-      //       .setColor(LightThemeColors.selectedIcon),
-      //   unselectedLabelStyle: TextStylesManager.cairo.regular.s10
-      //       .setColor(LightThemeColors.unselectedIcon),
-      //   backgroundColor: LightThemeColors.background,
-      //   selectedItemColor: LightThemeColors.selectedIcon,
-      //   unselectedItemColor: LightThemeColors.unselectedIcon,
-      // ),
-
-      //* Bottom Sheet Theme
-      bottomSheetTheme: const BottomSheetThemeData(
-        backgroundColor: LightThemeColors.bottomSheetBackground,
-        elevation: 0,
-      ),
-
-      //* Tab Bar Theme
-      // tabBarTheme: TabBarTheme(
-      //   indicatorSize: TabBarIndicatorSize.tab,
-      //   indicator: BoxDecoration(
-      //     color: LightThemeColors.primary,
-      //     borderRadius: BorderRadius.circular(AppSize.mainRadius),
-      //   ),
-      //   indicatorColor: Colors.transparent,
-      //   dividerColor: Colors.transparent,
-      //   labelColor: LightThemeColors.onPrimary,
-      //   unselectedLabelColor: LightThemeColors.primaryText,
-      //   labelStyle: TextStylesManager.cairo.s16,
-      //   unselectedLabelStyle: TextStylesManager.cairo.s16,
-      // ),
-
-      //* ElevatedButtonThemeData
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: AppThemeManager.elevatedButtonStyleTheme(
-          buttonColor: LightThemeColors.primary,
-          textColor: LightThemeColors.onPrimary,
-        ),
-      ),
-
-      //* TextButtonThemeData
-      textButtonTheme: const TextButtonThemeData(),
-
-      //* dividerTheme
-      dividerTheme: DividerThemeData(
-        thickness: 1,
-        color: LightThemeColors.inputFieldBorder,
-      ),
-
-      expansionTileTheme: ExpansionTileThemeData(
-        iconColor: LightThemeColors.primaryText,
-        textColor: LightThemeColors.primaryText,
-      ),
-
-      //* Input Decoration Theme
-      // inputDecorationTheme: InputDecorationTheme(
-      //   contentPadding: const EdgeInsets.symmetric(
-      //       horizontal: AppSize.s16, vertical: AppSize.s16),
-      //   hintStyle: TextStylesManager.cairo.regular.s16.ellipsis
-      //       .setColor(LightThemeColors.hintText),
-      //   border: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(AppSize.inputBorderRadius),
-      //     borderSide: BorderSide(color: LightThemeColors.inputFieldBorder),
-      //   ),
-      //   focusedBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(AppSize.inputBorderRadius),
-      //     borderSide: BorderSide.none,
-      //   ),
-      //   enabledBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(AppSize.inputBorderRadius),
-      //     borderSide: BorderSide.none,
-      //   ),
-      //   errorBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(AppSize.inputBorderRadius),
-      //     borderSide: BorderSide.none,
-      //   ),
-      //   focusedErrorBorder: OutlineInputBorder(
-      //     borderRadius: BorderRadius.circular(AppSize.inputBorderRadius),
-      //     borderSide: BorderSide.none,
-      //   ),
-      //   filled: true,
-      //   fillColor: LightThemeColors.primaryContainer,
-      // ),
     );
   }
 }

@@ -103,11 +103,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                                 ? user!.displayName!.substring(0, 1)
                                 : user?.email.substring(0, 1) ?? '?')
                             .toUpperCase(),
-                        style: TextStyle(
-                          fontSize: 36,
-                          color: Colors.blue,
-
-                        ),
+                        style: TextStyle(fontSize: 36, color: Colors.blue),
                       ),
                     ),
                   ),

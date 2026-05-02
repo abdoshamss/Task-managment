@@ -54,8 +54,7 @@ dependencies:
       url: https://github.com/abdoshamss/device_uuid
       ref: fix
   flutter_svg: ^2.2.3
-  firebase_remote_config: ^6.1.3
-
+ 
   bloc: ^9.1.0
   flutter_bloc: ^9.1.1
   carousel_slider: ^5.1.1
@@ -71,7 +70,7 @@ dependencies:
   persian_datetime_picker: ^3.2.0
   scroll_datetime_picker: ^0.2.2
   url_launcher: ^6.3.2
-  bot_toast: ^4.1.3
+
   pretty_dio_logger: ^1.4.0
   permission_handler: ^12.0.1
 

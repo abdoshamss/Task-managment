@@ -23,6 +23,7 @@ class OnboardingScreen extends StatelessWidget {
         builder: (context, state) {
           SplashCubit cubit = SplashCubit.get(context);
           return Scaffold(
+            backgroundColor: Colors.white,
             body: SafeArea(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../core/utils/utils.dart';
 
-import '../resources/text_style_manager.dart';
-
 // Define your dark theme colors
 class DarkThemeColors {
   const DarkThemeColors._();
@@ -84,22 +82,10 @@ class DarkTheme {
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: true,
-        titleTextStyle: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              ),
+
         iconTheme: const IconThemeData(color: DarkThemeColors.textPrimary),
-        actionsIconTheme: const IconThemeData(
-          color: DarkThemeColors.textPrimary,
-        ),
       ),
+
       //* Color Scheme
       //#9377B9
       //#FFFFFF opacity 0.60
@@ -136,114 +122,6 @@ class DarkTheme {
         outlineVariant: Color(0xFFD8C2BF),
         scrim: Color(0xFF000000),
       ),
-
-      //* App Bar Theme
-      scaffoldBackgroundColor: DarkThemeColors.background,
-      //* Text Theme
-      textTheme: TextTheme(
-        // Display
-        displayLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: DarkThemeColors.primary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: DarkThemeColors.primary,
-              ),
-
-        // Header
-        headlineLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-              ),
-
-        // Title
-        titleLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-              ),
-        titleMedium: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: DarkThemeColors.textPrimary,
-                fontWeight: FontWeight.w500,
-              )
-            : TextStylesManager.aristaMedium.copyWith(
-                color: DarkThemeColors.textPrimary,
-                fontWeight: FontWeight.w500,
-              ),
-        titleSmall: Utils.lang == "en"
-            ? TextStylesManager.aristaRegular.copyWith(
-                color: DarkThemeColors.textHint,
-              )
-            : TextStylesManager.gessRegular.copyWith(
-                color: DarkThemeColors.textHint,
-              ),
-
-        // Body Text
-        bodyLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-              )
-            : TextStylesManager.gessBold.copyWith(
-                color: DarkThemeColors.textPrimary,
-              ),
-        bodyMedium: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: DarkThemeColors.textPrimary,
-              )
-            : TextStylesManager.aristaMedium.copyWith(
-                color: DarkThemeColors.textPrimary,
-              ),
-        bodySmall: Utils.lang == "en"
-            ? TextStylesManager.aristaRegular.copyWith(
-                color: DarkThemeColors.textSecondary,
-              )
-            : TextStylesManager.gessRegular.copyWith(
-                color: DarkThemeColors.textSecondary,
-              ),
-
-        // label
-        labelLarge: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: DarkThemeColors.success,
-              )
-            : TextStylesManager.gessMedium.copyWith(
-                color: DarkThemeColors.success,
-              ),
-        labelMedium: Utils.lang == "en"
-            ? TextStylesManager.aristaMedium.copyWith(
-                color: DarkThemeColors.error,
-              )
-            : TextStylesManager.gessMedium.copyWith(
-                color: DarkThemeColors.error,
-              ),
-      ),
-
-      //*  bottomNavigationBarTheme
-      bottomNavigationBarTheme: BottomNavigationBarThemeData(),
-
-      //* Bottom Sheet Theme
-      bottomSheetTheme: BottomSheetThemeData(),
-
-      //* Tab Bar Theme
-      // tabBarTheme: TabBarTheme(),
-
-      //* ElevatedButtonThemeData
-      elevatedButtonTheme: ElevatedButtonThemeData(),
-
-      //* TextButtonThemeData
-      textButtonTheme: TextButtonThemeData(),
-
-      //* dividerTheme
-      dividerTheme: const DividerThemeData(),
-
-      //* Input Decoration Theme
-      inputDecorationTheme: InputDecorationTheme(),
     );
   }
 }

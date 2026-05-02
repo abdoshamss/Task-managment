@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// TaskFlow app color constants.
-/// Used alongside ThemeData for consistent branding.
 class AppColors {
   AppColors._();
 

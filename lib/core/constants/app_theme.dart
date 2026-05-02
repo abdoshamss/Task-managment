@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
-/// TaskFlow Material Design 3 themes (light & dark).
 class AppTheme {
   AppTheme._();
 

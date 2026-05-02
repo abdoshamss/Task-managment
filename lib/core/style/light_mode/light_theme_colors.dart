@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'light_theme.dart';
 import '../base_theme.dart';
 
 class LightTheme implements BaseTheme {
   @override
   String get name => "light";
-
-  @override
-  ThemeData get appTheme => lightApplicationTheme;
 
   @override
   Color get primary => const Color(0xFFA2C689);
@@ -176,4 +172,7 @@ class LightTheme implements BaseTheme {
 
   @override
   Color yellow = const Color(0xffFFF700);
+
+  @override
+  ThemeData get appTheme => throw UnimplementedError();
 }

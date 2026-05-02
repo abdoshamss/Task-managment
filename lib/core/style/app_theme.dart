@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../data_source/hive_service.dart';
 import '../utils/general_constants.dart';
 import 'base_theme.dart';
-import 'dark_mode/dark_theme_colors.dart';
 import 'font_styles.dart';
 import 'light_mode/light_theme_colors.dart';
 
@@ -15,10 +14,7 @@ class AppThemes {
   final String themeKey = 'app_theme';
 
   BaseTheme theme = LightTheme();
-  Map<String, BaseTheme> get themes => {
-    'light': LightTheme(),
-    'dark': DarkTheme(),
-  };
+  Map<String, BaseTheme> get themes => {'light': LightTheme()};
 
   void setThemeByName(String name) {
     theme = themes[name] ?? LightTheme();
@@ -36,16 +32,6 @@ class AppThemes {
   Future<void> setTheme(BaseTheme baseTheme) async {
     theme = baseTheme;
     setThemeLocale(baseTheme);
-  }
-
-  Color getPercentageColor(num percentage) {
-    if (percentage > 100) {
-      return AppColors.green;
-    } else if (percentage > 49) {
-      return AppColors.cyan.withOpacity(0.7);
-    } else {
-      return AppColors.secondary.withOpacity(0.7);
-    }
   }
 
   MaterialColor createMaterialColor(Color color) {

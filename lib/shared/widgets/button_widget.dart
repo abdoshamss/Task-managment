@@ -67,7 +67,6 @@ class ButtonWidget extends StatelessWidget {
                 fontSize: fontSize ?? 16,
                 color: textColor ?? Colors.blue,
               ),
-              //  style: TextStyle(color: AppColors.secondary),
             ),
       ),
     );
@@ -102,15 +101,7 @@ class TextButtonWidget extends StatelessWidget {
           fontSize: size ?? 16,
           color: color ?? Colors.blue,
         ),
-        //  style: TextStyle(color: AppColors.secondary),
       ),
-      // style: TextButton.styleFrom(
-      //   elevation: 0,
-      //   textStyle: TextStyle(
-      //     fontWeight: FontWeight.w600,
-      //     fontSize: (width <= 550) ? 13 : 17,
-      //   ),
-      // ),
     );
   }
 }

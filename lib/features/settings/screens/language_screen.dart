@@ -1,9 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:restart_app/restart_app.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
-import '../../../../core/general/general_cubit.dart';
 import '../../../../core/localization/localization_helper.dart';
 
 class LanguageScreen extends StatelessWidget {
@@ -35,8 +33,7 @@ class LanguageScreen extends StatelessWidget {
                 if (value != null && value != currentLang) {
                   await LocalizationHelper.setLocale(value);
 
-                    Restart.restartApp();
-
+                  Restart.restartApp();
                 }
               },
             ),
@@ -49,8 +46,7 @@ class LanguageScreen extends StatelessWidget {
               onChanged: (value) async {
                 if (value != null && value != currentLang) {
                   await LocalizationHelper.setLocale(value);
-                     Restart.restartApp();
-
+                  Restart.restartApp();
                 }
               },
             ),

@@ -3,8 +3,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../../shared/widgets/customtext.dart';
-
 import '../../../../core/theme/light_theme.dart';
 import '../../../../shared/widgets/default_image_widget.dart';
 import '../../cubit/splash_cubit.dart';

@@ -31,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
             duration: const Duration(milliseconds: 600),
             child: CircleAvatar(
               radius: 50,
-              backgroundColor:LightThemeColors.primary.withValues(alpha: 0.2),
+              backgroundColor: LightThemeColors.primary.withValues(alpha: 0.2),
               child: Text(
                 (user?.displayName?.isNotEmpty == true
                         ? user!.displayName!.substring(0, 1)
