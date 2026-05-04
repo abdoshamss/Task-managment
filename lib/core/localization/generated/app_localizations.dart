@@ -473,7 +473,7 @@ abstract class AppLocalizations {
   /// No description provided for @dontHaveAccount.
   ///
   /// In ar, this message translates to:
-  /// **'ليس لديك حساب؟ سجل'**
+  /// **'ليس لديك حساب؟'**
   String get dontHaveAccount;
 
   /// No description provided for @alreadyHaveAccount.

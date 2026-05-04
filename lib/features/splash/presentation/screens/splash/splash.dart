@@ -32,6 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
         );
 
         if (userData != null) {
+          
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
@@ -57,6 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
         body: BlocConsumer<SplashCubit, SplashStates>(
           listener: (context, state) {},
           builder: (context, state) {
+        
             return Center(
               child: ZoomIn(
                 duration: const Duration(milliseconds: 2000),

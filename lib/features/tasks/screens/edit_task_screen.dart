@@ -43,11 +43,15 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
   }
 
   Future<void> _pickDate() async {
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final firstDate = _dueDate.isBefore(today) ? _dueDate : today;
+
     final picked = await showDatePicker(
       context: context,
       initialDate: _dueDate,
-      firstDate: DateTime.now(),
-      lastDate: DateTime.now().add(const Duration(days: 365 * 2)),
+      firstDate: firstDate,
+      lastDate: now.add(const Duration(days: 365 * 2)),
     );
     if (picked != null) setState(() => _dueDate = picked);
   }
