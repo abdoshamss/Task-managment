@@ -1,10 +1,10 @@
 part of 'lang_cubit.dart';
 
-abstract class GeneralState {}
+abstract class LangState {}
 
-class GeneralInitial extends GeneralState {}
+class LangInitial extends LangState {}
 
-class GeneralChangeLocale extends GeneralState {
+class LangChangeLocale extends LangState {
   final String locale;
-  GeneralChangeLocale({required this.locale});
+  LangChangeLocale({required this.locale});
 }

@@ -6,8 +6,8 @@ import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/localization/localization_helper.dart';
 import 'language_screen.dart';
 
-// BlocBuilder<GeneralCubit, dynamic>(
-//   buildWhen: (p, c) => c is GeneralChangeAppTheme,
+// BlocBuilder<LangCubit, dynamic>(
+//   buildWhen: (p, c) => c is LangChangeAppTheme,
 //   builder: (context, state) {
 //     return SwitchListTile(
 //       title: Text(l10n.darkMode),
@@ -23,7 +23,7 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final cubit = context.read<GeneralCubit>();
+    final cubit = context.read<LangCubit>();
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settings)),

@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/theme/light_theme.dart';
 
@@ -148,9 +147,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
                     EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 filled: true,
                 fillColor: widget.backgroundColor ?? Colors.white,
-                prefixIcon: widget.prefixIcon == null
-                    ? null
-                    : SvgPicture.asset(widget.prefixIcon ?? ""),
+
                 prefix: widget.prefixWidget,
                 suffix: widget.suffixWidget,
                 suffixIcon:

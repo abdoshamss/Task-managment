@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_mangment/core/lang_cubit/lang_cubit.dart';
+import 'package:task_mangment/core/utils/general_constants.dart';
 import 'core/data_source/hive_service.dart';
 import 'core/localization/generated/app_localizations.dart';
 import 'core/localization/localization_helper.dart';
-import 'core/utils/general_constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'features/auth/cubit/firebase_auth_cubit.dart';
@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => FirebaseAuthCubit()),
         BlocProvider(create: (_) => TaskCubit()),
-        BlocProvider(create: (_) => GeneralCubit()),
+        BlocProvider(create: (_) => LangCubit()),
       ],
-      child: BlocConsumer<GeneralCubit, GeneralState>(
+      child: BlocConsumer<LangCubit, LangState>(
         listener: (context, state) {},
         builder: (context, state) {
           return MaterialApp(

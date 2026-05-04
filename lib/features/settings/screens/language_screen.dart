@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:restart_app/restart_app.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_mangment/core/lang_cubit/lang_cubit.dart';
+import 'package:task_mangment/features/splash/presentation/screens/splash/splash.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../core/localization/localization_helper.dart';
 
@@ -31,9 +33,13 @@ class LanguageScreen extends StatelessWidget {
               groupValue: currentLang,
               onChanged: (value) async {
                 if (value != null && value != currentLang) {
-                  await LocalizationHelper.setLocale(value);
-
-                  Restart.restartApp();
+                  //await LocalizationHelper.setLocale(value);
+                  context.read<LangCubit>().changeLocale(value);
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => SplashScreen()),
+                    (route) => false,
+                  );
                 }
               },
             ),
@@ -45,8 +51,13 @@ class LanguageScreen extends StatelessWidget {
               groupValue: currentLang,
               onChanged: (value) async {
                 if (value != null && value != currentLang) {
-                  await LocalizationHelper.setLocale(value);
-                  Restart.restartApp();
+                  // await LocalizationHelper.setLocale(value);
+                  context.read<LangCubit>().changeLocale(value);
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => SplashScreen()),
+                    (route) => false,
+                  );
                 }
               },
             ),

@@ -4,14 +4,14 @@ import '../localization/localization_helper.dart';
 
 part 'lang_state.dart';
 
-class GeneralCubit extends Cubit<GeneralState> {
-  GeneralCubit() : super(GeneralInitial());
-  static GeneralCubit get(context) => BlocProvider.of(context);
+class LangCubit extends Cubit<LangState> {
+  LangCubit() : super(LangInitial());
+  static LangCubit get(context) => BlocProvider.of(context);
 
   void changeLocale(String localeName) {
     if (LocalizationHelper.currentLocalName == localeName) return;
 
     LocalizationHelper.setLocale(localeName);
-    emit(GeneralChangeLocale(locale: LocalizationHelper.currentLocalName));
+    emit(LangChangeLocale(locale: LocalizationHelper.currentLocalName));
   }
 }
