@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-import '../utils/utils.dart';
 
 class LightThemeColors {
   const LightThemeColors._();
 
   // Primary Colors
-  static const Color primary = Colors.blue;
   static const Color white = Color(0xFFFFFFFF);
 
   // Secondary Colors
@@ -22,10 +18,7 @@ class LightThemeColors {
   static const Color bottomSheetBackground = Colors.white;
   static const Color dialogBackground = Colors.white;
   static const Color background = Colors.white;
-  static const Color buttonBackground = primary;
-  static const Color textFieldBackground = primary;
   static const Color appBarBackground = background;
-  static const Color bottomNavigationBarBackground = primary;
   static Color barrierBackground = background.withOpacity(0.53);
   static const secondaryText = Color(0xFF616161);
 
@@ -63,7 +56,6 @@ class LightThemeColors {
 
   // Icons Colors
   static Color unselectedIcon = primaryText[70]!;
-  static Color selectedIcon = primary;
 
   // button Colors
   static const Color buttonColor = Color(0xFF613A96);
@@ -104,83 +96,4 @@ class LightThemeColors {
     90: const Color(onPrimaryValue).withOpacity(0.9),
     100: const Color(onPrimaryValue),
   });
-}
-
-class LightTheme {
-  static ThemeData getTheme() {
-    // AppThemeManager.setStatusBarAndNavigationBarColors(ThemeMode.light);
-    return ThemeData(
-      //* Light Theme
-      scaffoldBackgroundColor: LightThemeColors.scaffoldBackground,
-      useMaterial3: true,
-      brightness: Brightness.light,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-      fontFamily: Utils.lang == "en" ? "arista" : "GESS",
-      cardColor: LightThemeColors.primary,
-      //* Card Theme *//
-
-      //* Color Scheme
-      colorScheme: const ColorScheme(
-        brightness: Brightness.light,
-        primary: Color(0xFF613A96),
-        onPrimary: Color(0xFFFFFFFF),
-        primaryContainer: Color(0xFFFFFFFF),
-        onPrimaryContainer: Color(0xFF410002),
-        secondary: Color(0xFF613A96),
-        onSecondary: Color(0xFFFFFFFF),
-        secondaryContainer: Color(0xFFCFE5FF),
-        onSecondaryContainer: Color(0xFF001D34),
-        tertiary: Color(0xFF24223E),
-        onTertiary: Color(0xFF24223E),
-        tertiaryContainer: Color(0xFFFFDAD6),
-        onTertiaryContainer: Color(0xFF410002),
-        error: LightThemeColors.error,
-        errorContainer: Color(0xFFFFDAD6),
-        onError: Color(0xFFFFFFFF),
-        onErrorContainer: Color(0xFF410002),
-        surface: Color(0xFFFFFFFF),
-        // surface: Color(0x05FFFFFF),
-        onSurface: Color(0xFF001F25),
-        surfaceContainerHighest: Color(0xFFF5DDDA),
-        onSurfaceVariant: Color(0xFF534341),
-        outline: Color(0xFF857371),
-        onInverseSurface: Color(0xFFD6F6FF),
-        inverseSurface: Color(0xFF00363F),
-        inversePrimary: Color(0xFFFFB4AB),
-        shadow: Color(0xFF000000),
-        // app bar color on scroll
-        surfaceTint: Color(0xFFFFFFFF),
-        outlineVariant: Color(0xFFD8C2BF),
-        scrim: Color(0xFF000000),
-      ),
-
-      //* App Bar Theme
-      // appBarTheme: AppBarTheme(
-      //   elevation: 0,
-      //   centerTitle: false,
-      //   scrolledUnderElevation: 0,
-      //   backgroundColor: LightThemeColors.background,
-      //   systemOverlayStyle: SystemUiOverlayStyle.dark,
-      //   titleTextStyle:
-      //       TextStylesManager.gessMedium.copyWith(fontSize: FontSize.s14, color: LightThemeColors.textPrimary),
-      //   iconTheme: IconThemeData(color: LightThemeColors.primaryText),
-      // ),
-      appBarTheme: AppBarTheme(
-        backgroundColor: LightThemeColors.scaffoldBackground,
-        // color: DarkThemeColors.background,
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
-        foregroundColor: LightThemeColors.scaffoldBackground,
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        centerTitle: true,
-
-        iconTheme: const IconThemeData(color: LightThemeColors.textPrimary),
-        actionsIconTheme: const IconThemeData(
-          color: LightThemeColors.textPrimary,
-        ),
-      ),
-
-      // //* Text Theme
-    );
-  }
 }

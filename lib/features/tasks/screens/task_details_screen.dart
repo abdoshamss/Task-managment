@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:task_mangment/core/theme/light_theme.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
@@ -124,10 +123,9 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
                       ),
                       const SizedBox(width: 8),
                       Switch(
-                        activeThumbColor: LightThemeColors.primary,
+                        activeThumbColor: Colors.blue,
                         value: _isCompleted,
-                        inactiveTrackColor: LightThemeColors.primary
-                            .withOpacity(.2),
+                        inactiveTrackColor: Colors.blue.withOpacity(.2),
                         onChanged: (v) {
                           setState(() => _isCompleted = v);
                           taskCubit.toggleComplete(task.id, v);

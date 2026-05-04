@@ -163,7 +163,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
                               passHidden
                                   ? Icons.remove_red_eye_outlined
                                   : Icons.visibility_off,
-                              color: LightThemeColors.primary.withOpacity(.5),
+                              color: Colors.blue.withOpacity(.5),
                             ),
                           )
                         : null),

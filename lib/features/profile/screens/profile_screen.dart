@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:task_mangment/core/theme/light_theme.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../auth/cubit/firebase_auth_cubit.dart';
@@ -31,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
             duration: const Duration(milliseconds: 600),
             child: CircleAvatar(
               radius: 50,
-              backgroundColor: LightThemeColors.primary.withValues(alpha: 0.2),
+              backgroundColor: Colors.blue.withValues(alpha: 0.2),
               child: Text(
                 (user?.displayName?.isNotEmpty == true
                         ? user!.displayName!.substring(0, 1)

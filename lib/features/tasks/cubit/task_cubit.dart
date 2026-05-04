@@ -1,10 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/constants/app_strings.dart';
 import '../models/task_model.dart';
 
- class TaskCubit extends Cubit<int> {
+class TaskCubit extends Cubit<int> {
   TaskCubit() : super(0);
 
   static TaskCubit get(context) => context.read<TaskCubit>();
@@ -14,9 +13,9 @@ import '../models/task_model.dart';
     final uid = _userId;
     if (uid == null) return null;
     return FirebaseFirestore.instance
-        .collection(AppStrings.usersCollection)
+        .collection("users")
         .doc(uid)
-        .collection(AppStrings.tasksSubcollection);
+        .collection("tasks");
   }
 
   Stream<List<TaskModel>> getTasksStream() {

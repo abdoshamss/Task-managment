@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:task_mangment/core/theme/light_theme.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../auth/cubit/firebase_auth_cubit.dart';
@@ -44,7 +43,7 @@ class _TaskFlowLayoutScreenState extends State<TaskFlowLayoutScreen> {
             Padding(
               padding: const EdgeInsets.only(right: 8, left: 8),
               child: CircleAvatar(
-                backgroundColor: LightThemeColors.primary.withOpacity(.24),
+                backgroundColor: Colors.blue.withOpacity(.24),
                 child: Text(
                   (user.displayName?.isNotEmpty == true
                           ? user.displayName!.substring(0, 1)
@@ -59,7 +58,7 @@ class _TaskFlowLayoutScreenState extends State<TaskFlowLayoutScreen> {
       body: _screens[_currentIndex],
       floatingActionButton: _currentIndex == 0
           ? FloatingActionButton(
-              backgroundColor: LightThemeColors.primary,
+              backgroundColor: Colors.blue,
               onPressed: () async {
                 await Navigator.of(context).push(
                   MaterialPageRoute(builder: (_) => const AddTaskScreen()),
@@ -69,7 +68,7 @@ class _TaskFlowLayoutScreenState extends State<TaskFlowLayoutScreen> {
             )
           : null,
       bottomNavigationBar: NavigationBar(
-        backgroundColor: LightThemeColors.primary.withOpacity(.1),
+        backgroundColor: Colors.blue.withOpacity(.1),
         selectedIndex: _currentIndex,
         indicatorColor: Colors.lightBlue,
 

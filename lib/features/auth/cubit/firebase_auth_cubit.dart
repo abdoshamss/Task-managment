@@ -94,8 +94,6 @@ class FirebaseAuthCubit extends Cubit<FirebaseAuthState> {
     emit(FirebaseAuthLoggedOut());
   }
 
-  
-
   Future<bool> updateProfile({String? displayName}) async {
     emit(ProfileUpdateLoading());
     try {

@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
-import '../../../core/theme/light_theme.dart';
 import '../cubit/task_cubit.dart';
 import '../models/task_model.dart';
 import 'edit_task_screen.dart';
@@ -98,7 +97,7 @@ class CompletedTasksScreen extends StatelessWidget {
                 ),
                 child: Container(
                   margin: EdgeInsets.only(bottom: 8),
-                  color: LightThemeColors.primary.withOpacity(.1),
+                  color: Colors.blue.withOpacity(.1),
                   child: ListTile(
                     title: Text(
                       task.title,

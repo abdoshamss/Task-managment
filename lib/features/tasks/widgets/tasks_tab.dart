@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/localization/generated/app_localizations.dart';
 import '../cubit/task_cubit.dart';
 import '../models/task_model.dart';
-import '../screens/edit_task_screen.dart';
 import '../screens/task_details_screen.dart';
 import 'empty_state.dart';
 import 'filter_chip.dart';
@@ -112,7 +111,7 @@ class TasksTab extends StatelessWidget {
                                 builder: (_) => TaskDetailsScreen(task: task),
                               ),
                             ),
-                             onToggleComplete: (v) =>
+                            onToggleComplete: (v) =>
                                 taskCubit.toggleComplete(task.id, v),
                           ),
                         );

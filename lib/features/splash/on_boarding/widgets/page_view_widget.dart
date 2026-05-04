@@ -3,7 +3,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/theme/light_theme.dart';
 import '../../cubit/splash_cubit.dart';
 import '../../cubit/splash_states.dart';
 
@@ -47,7 +46,7 @@ class PageViewWidget extends StatelessWidget {
                             textAlign: TextAlign.start,
                             style: TextStyle(
                               fontSize: 36,
-                              color: LightThemeColors.primary,
+                              color: Colors.blue,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

@@ -8,7 +8,6 @@ import '../../../../core/utils/validators.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
 import '../cubit/firebase_auth_cubit.dart';
-import '../../tasks/screens/home_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});

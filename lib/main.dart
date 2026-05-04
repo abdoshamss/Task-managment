@@ -12,6 +12,7 @@ import 'firebase_options.dart';
 import 'features/auth/cubit/firebase_auth_cubit.dart';
 import 'features/tasks/cubit/task_cubit.dart';
 import 'features/splash/presentation/screens/splash/splash.dart';
+
 GlobalKey<NavigatorState>? navigatorKeyy = GlobalKey<NavigatorState>();
 //abdoshams2005@gmail.com
 Future<void> main() async {
@@ -25,7 +26,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
@@ -34,13 +35,12 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => GeneralCubit()),
       ],
       child: BlocConsumer<GeneralCubit, GeneralState>(
-        listener: (context, state) {
-         },
-         builder: (context, state) {
-           return MaterialApp(
+        listener: (context, state) {},
+        builder: (context, state) {
+          return MaterialApp(
             title: 'Task Flow',
             navigatorKey: navigatorKeyy,
-           
+
             debugShowCheckedModeBanner: false,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             locale: LocalizationHelper.currentLocale,
@@ -53,9 +53,9 @@ class MyApp extends StatelessWidget {
               }
               return supportedLocales.first;
             },
-    
+
             supportedLocales: AppLocalizations.supportedLocales,
-    
+
             home: const SplashScreen(),
           );
         },

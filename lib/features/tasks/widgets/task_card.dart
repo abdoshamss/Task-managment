@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_mangment/core/theme/light_theme.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../models/task_model.dart';
@@ -9,13 +8,13 @@ class TaskCard extends StatelessWidget {
     super.key,
     required this.task,
     required this.onTap,
- 
-     required this.onToggleComplete,
+
+    required this.onToggleComplete,
   });
 
   final TaskModel task;
   final VoidCallback onTap;
-   final ValueChanged<bool> onToggleComplete;
+  final ValueChanged<bool> onToggleComplete;
 
   Color _priorityColor() {
     switch (task.priority) {
@@ -31,13 +30,13 @@ class TaskCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: LightThemeColors.primary.withOpacity(.1),
+      color: Colors.blue.withOpacity(.1),
       margin: const EdgeInsets.only(bottom: 8),
       child: ListTile(
         leading: Switch(
-          activeThumbColor: LightThemeColors.primary,
+          activeThumbColor: Colors.blue,
           value: task.isCompleted,
-          inactiveTrackColor: LightThemeColors.primary.withOpacity(.2),
+          inactiveTrackColor: Colors.blue.withOpacity(.2),
           onChanged: (v) => onToggleComplete(v),
         ),
         title: Text(

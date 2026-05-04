@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_mangment/core/theme/light_theme.dart';
 
 class CustomFilterChip extends StatelessWidget {
   const CustomFilterChip({
@@ -18,7 +17,7 @@ class CustomFilterChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FilterChip(
-      color: WidgetStateProperty.all(LightThemeColors.primary.withOpacity(.6)),
+      color: WidgetStateProperty.all(Colors.blue.withOpacity(.6)),
       label: Text(label),
       selected: selected,
       onSelected: (_) => onSelected(value),

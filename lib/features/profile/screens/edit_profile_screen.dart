@@ -5,7 +5,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
 import '../../../../shared/widgets/button_widget.dart';
 import '../../../../shared/widgets/edit_text_widget.dart';
-import '../../../core/theme/light_theme.dart';
 import '../../auth/cubit/firebase_auth_cubit.dart';
 
 class EditProfileScreen extends StatefulWidget {
@@ -95,9 +94,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   child: Center(
                     child: CircleAvatar(
                       radius: 50,
-                      backgroundColor: LightThemeColors.primary.withValues(
-                        alpha: 0.2,
-                      ),
+                      backgroundColor: Colors.blue.withValues(alpha: 0.2),
                       child: Text(
                         (user?.displayName?.isNotEmpty == true
                                 ? user!.displayName!.substring(0, 1)
