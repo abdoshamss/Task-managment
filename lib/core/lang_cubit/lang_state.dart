@@ -1,4 +1,4 @@
-part of 'general_cubit.dart';
+part of 'lang_cubit.dart';
 
 abstract class GeneralState {}
 

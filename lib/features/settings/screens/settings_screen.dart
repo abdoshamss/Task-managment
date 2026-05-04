@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_mangment/core/lang_cubit/lang_cubit.dart';
 import '../../../../core/localization/generated/app_localizations.dart';
-import '../../../../core/general/general_cubit.dart';
 import '../../../../core/localization/localization_helper.dart';
 import 'language_screen.dart';
 
