@@ -62,7 +62,7 @@
   "completedCount": "Completed",
   "pendingCount": "Pending",
   "forgotPassword": "Forgot Password?",
-  "dontHaveAccount": "Don't have an account? Register",
+  "dontHaveAccount": "Don't have an account?",
   "alreadyHaveAccount": "Already have an account? Login",
   "emailNotFound": "Email not found",
   "wrongPassword": "Wrong password",

@@ -197,7 +197,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get forgotPassword => 'نسيت كلمة المرور؟';
 
   @override
-  String get dontHaveAccount => 'ليس لديك حساب؟ سجل';
+  String get dontHaveAccount => 'ليس لديك حساب؟';
 
   @override
   String get alreadyHaveAccount => 'لديك حساب؟ تسجيل الدخول';

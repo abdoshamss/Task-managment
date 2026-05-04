@@ -62,7 +62,7 @@
   "completedCount": "المكتملة",
   "pendingCount": "المعلقة",
   "forgotPassword": "نسيت كلمة المرور؟",
-  "dontHaveAccount": "ليس لديك حساب؟ سجل",
+  "dontHaveAccount": "ليس لديك حساب؟",
   "alreadyHaveAccount": "لديك حساب؟ تسجيل الدخول",
   "emailNotFound": "البريد الإلكتروني غير مسجل",
   "wrongPassword": "كلمة المرور غير صحيحة",
